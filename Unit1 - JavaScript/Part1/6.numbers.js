@@ -17,3 +17,6 @@ console.log(n1 * n2); // 8
 console.log(n1 * n3); // NaN
 const res = n1 * n3;
 console.log(Number.isNaN(res)); // true
+
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object
