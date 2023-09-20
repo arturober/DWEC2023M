@@ -23,11 +23,21 @@ const email = "pepito.perez@gmail.com";
 const usuario = email.substring(0, email.indexOf("@"));
 console.log(usuario);
 
-let postCode = "12"
+let postCode = "12";
 console.log(postCode.padStart(5)); // "   12"
 console.log(postCode.padStart(5, "0")); // "00012"
 
 let uString = "Unicode astral plane: \u{1f3c4}";
 console.log(uString); // Prints "Unicode astral plane: 🏄" (surfer icon)
-console.log("\u{1F618}");
+console.log("\u{1F618}"); // 😘
 console.log("😘");
+
+let uString2 = "\u{1f30a}\u{1f3c4}\u{1f40b}"; // THREE characters:
+console.log(uString2, uString2.length); // 6
+console.log(Array.from(uString2).length); // 3
+
+const numero = 0;
+if (!numero) {
+  console.log("Number is not valid");
+}
+
