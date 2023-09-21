@@ -34,3 +34,10 @@ console.log(max); // 61
 // Find the first even number
 console.log(nums.find((n) => n % 2 === 0)); // 16
 console.log(nums.findIndex((n) => n % 2 === 0)); // 2
+
+console.log(nums.includes(9)); // true
+
+const words2 = ["house", "tree", "dog"];
+console.log(words2.map(w => Array.from(w))); // [["h", "o", "u", "s", "e"], ["t", "r", "e", "e"], ["d", "o", "g"]]
+console.log(words2.flatMap(w => Array.from(w))); // ["h", "o", "u", "s", "e", "t", "r", "e", "e", "d", "o", "g"]
+
