@@ -8,18 +8,28 @@ const afterBtn = document.getElementById("addAfter");
 const clearBtn = document.getElementById("clear");
 
 firstBtn.addEventListener("click", e => {
-
+    const li = document.createElement("li");
+    li.append(descInput.value);
+    list.prepend(li);
+    descInput.value = "";
 });
 
 lastBtn.addEventListener("click", e => {
-
+    const li = document.createElement("li");
+    li.append(descInput.value);
+    list.append(li);
+    descInput.value = "";
 });
 
 afterBtn.addEventListener("click", e => {
-
+    const li = document.createElement("li");
+    li.append(descInput.value);
+    const child = list.children[+document.getElementById("position").value];
+    child.after(li);
+    descInput.value = "";
 });
 
 clearBtn.addEventListener("click", e => {
-
+    list.replaceChildren();
 });
 
