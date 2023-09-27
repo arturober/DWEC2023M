@@ -19,3 +19,11 @@ const divs = document.querySelectorAll("div.c1");
 divs.forEach(div => div.addEventListener("click", e => {
     div.classList.toggle("green");
 }));
+
+const div3 = document.createElement("div");
+div3.append("A div with no click event");
+div3.style.color = "white";
+div3.style.backgroundColor = "green";
+div3.style.width = "100px";
+div3.style.height = "100px";
+document.body.append(div3);
