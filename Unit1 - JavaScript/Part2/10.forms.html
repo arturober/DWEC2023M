@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="10.forms.js" defer></script>
+    <style>
+        #imgPreview {
+            max-height: 100px;
+        }
+
+        #list img {
+            max-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <p>Description: <input type="text" name="description"></p>
+        <p>Image: <input type="file" name="image"></p>
+        <p><img src="" id="imgPreview"></p>
+        <p><button type="submit">Send</button></p>
+    </form>
+    <ul id="list"></ul>
+</body>
+</html>
