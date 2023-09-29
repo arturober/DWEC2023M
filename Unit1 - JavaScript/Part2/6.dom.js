@@ -8,9 +8,10 @@ const afterBtn = document.getElementById("addAfter");
 const clearBtn = document.getElementById("clear");
 
 firstBtn.addEventListener("click", e => {
-    const li = document.createElement("li");
-    li.append(descInput.value);
-    list.prepend(li);
+    list.innerHTML = `<li>${descInput.value}</li>${list.innerHTML}`;
+    // const li = document.createElement("li");
+    // li.append(descInput.value);
+    // list.prepend(li);
     descInput.value = "";
 });
 
