@@ -35,10 +35,15 @@ class Square {
         if(side <= 0) throw Error("Side must be positive!");
         this.#side = side;
     }
+
+    get area() {
+        return this.#side ** 2;
+    }
 }
 
 const s = new Square(23);
 console.log(s.side); // Implicit getter
 s.side = 19; // Implicit setter
 console.log(s.side);
+console.log(`Area ${s.area}`);
 s.side = -1; // Error: Side must be positive!
