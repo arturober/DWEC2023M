@@ -1,18 +1,17 @@
-"use strict";
+import { ProductService } from "./product-service.js";
 
+const productService = new ProductService();
 const tbody = document.querySelector("#tabla tbody");
 const form = document.getElementById("formProduct");
 const imgPreview = document.getElementById("imgPreview");
 
-function deleteProd(e) {
-  fetch(
-    `https://api.fullstackpro.es/products-example/products/${e.target.dataset.id}`,
-    { method: "DELETE" }
-  ).then((resp) => {
-    if(resp.status !== 204) throw Error("Error deleting product. Code: " + resp.status)
+async function deleteProd(e) {
+  try {
+    await productService.delete(e.target.dataset.id);
     e.target.closest("tr").remove();
-  })
-  .catch((e) => console.error(e.message));
+  } catch(error) {
+    console.error("No se pudo borrar: " + error);
+  }
 }
 
 function showProduct(product) {
@@ -58,9 +57,12 @@ function showProduct(product) {
   tbody.append(tr);
 }
 
-fetch("https://api.fullstackpro.es/products-example/products")
-  .then((resp) => resp.json())
-  .then((json) => json.products.forEach((p) => showProduct(p)));
+async function getProducts() {
+  const products = await productService.getAll();
+  products.forEach((p) => showProduct(p));
+}
+
+getProducts();
 
 form.fileName.addEventListener("change", e => {
   const file = form.fileName.files[0];
@@ -74,7 +76,7 @@ form.fileName.addEventListener("change", e => {
   }
 });
 
-form.addEventListener("submit", e => {
+form.addEventListener("submit", async e => {
   e.preventDefault();
 
   const product = {
@@ -83,14 +85,8 @@ form.addEventListener("submit", e => {
     imageUrl: imgPreview.src
   };
 
-  fetch('https://api.fullstackpro.es/products-example/products', {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(product)
-  }).then(resp => resp.json())
-  .then(json => {
-    showProduct(json.product);
-    form.reset();
-    imgPreview.src = "";
-  });
+  const insertProd = await productService.insert(product);
+  showProduct(insertProd);
+  form.reset();
+  imgPreview.src = "";
 });
