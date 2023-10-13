@@ -10,7 +10,7 @@ export class ProductService {
     }
 
     async insert(product) {
-        const resp = await this.#http.post(`${SERVER}/products`);
+        const resp = await this.#http.post(`${SERVER}/products`, product);
         return resp.product;
     }
 
