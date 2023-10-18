@@ -1,4 +1,5 @@
 import { ProductService } from "./product-service.js";
+import dayjs from "dayjs";
 
 const productService = new ProductService();
 const tbody = document.querySelector("#tabla tbody");
@@ -32,14 +33,15 @@ function showProduct(product) {
 
     const tdAvail = document.createElement("td");
     tdAvail.append(
-        new Intl.DateTimeFormat("en-US", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            hourCycle: "h12",
-        }).format(new Date(product.available))
+        // new Intl.DateTimeFormat("en-US", {
+        //     day: "numeric",
+        //     month: "long",
+        //     year: "numeric",
+        //     hour: "numeric",
+        //     minute: "numeric",
+        //     hourCycle: "h12",
+        // }).format(new Date(product.available))
+        dayjs(product.available).format("DD/MM/YYYY")
     );
 
     const tdDel = document.createElement("td");
