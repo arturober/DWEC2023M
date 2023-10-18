@@ -1,0 +1,21 @@
+{
+  "name": "example-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm test",
+    "start": "lite-server",
+    "test": "eslint index.js"
+  },
+  "author": "Arturo",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "lite-server": "^2.6.1",
+    "uglify-js": "^3.17.4"
+  }
+}
