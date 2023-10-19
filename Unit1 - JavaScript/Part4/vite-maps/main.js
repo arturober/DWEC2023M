@@ -1,6 +1,7 @@
 import { MyGeolocation } from "./myGeolocation";
 
-const API_KEY = "An8JNymYeoGzMUqXfVJlMm_9CLeMcpx_5NB0N1G9cUEUxIadv7XX5zVc008au1N1";
+const API_KEY =
+  "An8JNymYeoGzMUqXfVJlMm_9CLeMcpx_5NB0N1G9cUEUxIadv7XX5zVc008au1N1";
 
 async function showStaticMap() {
   const coords = await MyGeolocation.getGeolocation();
@@ -11,3 +12,17 @@ async function showStaticMap() {
 }
 
 showStaticMap();
+
+function loadBingAPI(apiKey) {
+  const script = document.createElement("script");
+  script.src = `https://www.bing.com/api/maps/mapcontrol?key=${apiKey}&callback=showMap`;
+  script.defer = true;
+  document.body.append(script);
+}
+
+window.showMap = () => {
+  new window.Microsoft.Maps.Map(document.getElementById("map"), {});
+}
+
+loadBingAPI(API_KEY);
+
