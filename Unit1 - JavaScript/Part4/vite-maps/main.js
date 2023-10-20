@@ -13,16 +13,43 @@ async function showStaticMap() {
 
 showStaticMap();
 
-function loadBingAPI(apiKey) {
+function loadBingAPI() {
   const script = document.createElement("script");
-  script.src = `https://www.bing.com/api/maps/mapcontrol?key=${apiKey}&callback=showMap`;
+  script.src = `https://www.bing.com/api/maps/mapcontrol?callback=showMap`;
   script.defer = true;
   document.body.append(script);
 }
 
-window.showMap = () => {
-  new window.Microsoft.Maps.Map(document.getElementById("map"), {});
+function createMarker(map, location, title, color = "blue") {
+  const pin = new Microsoft.Maps.Pushpin(location, { title, color });
+  map.entities.push(pin);
 }
 
-loadBingAPI(API_KEY);
+window.showMap = async () => {
+  const coords = await MyGeolocation.getGeolocation();
+  const center = new Microsoft.Maps.Location(coords.latitude, coords.longitude);
 
+  const map = new Microsoft.Maps.Map(document.getElementById("map"), {
+    credentials: API_KEY,
+    center, // same as center: center
+    mapTypeId: Microsoft.Maps.MapTypeId.road,
+    zoom: 14,
+  });
+
+  Microsoft.Maps.Events.addHandler(map, "click", (e) => {
+    createMarker(map, e.location, "");
+    // map.setView({center: e.location});
+  });
+
+  createMarker(map, center, "You are here", "red");
+
+  Microsoft.Maps.loadModule("Microsoft.Maps.AutoSuggest", () => {
+    const manager = new Microsoft.Maps.AutosuggestManager({ map });
+    manager.attachAutosuggest("#searchBox", "#searchBoxContainer", (result) => {
+      createMarker(map, result.location, "", "green");
+      map.setView({ center: result.location });
+    });
+  });
+};
+
+loadBingAPI(API_KEY);
