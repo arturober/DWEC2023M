@@ -44,7 +44,7 @@ window.showMap = async () => {
   createMarker(map, center, "You are here", "red");
 
   Microsoft.Maps.loadModule("Microsoft.Maps.AutoSuggest", () => {
-    const manager = new Microsoft.Maps.AutosuggestManager({ map });
+    const manager = new Microsoft.Maps.AutosuggestManager({ map, businessSuggestions: true });
     manager.attachAutosuggest("#searchBox", "#searchBoxContainer", (result) => {
       createMarker(map, result.location, "", "green");
       map.setView({ center: result.location });
