@@ -39,3 +39,12 @@ people.forEach(p => {
         console.log(p.email);
     }
 });
+
+const array = ["dog", "house", "tree", "table", "car"];
+const word = array.find((p) => p.startsWith("z")); // Returns string | undefined
+
+console.log(word?.toLocaleUpperCase());
+
+// const p2: Readonly<Person> = new Person("pepe", 34);
+
+//p2.age = 24; ERROR
