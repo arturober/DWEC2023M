@@ -52,4 +52,4 @@ window.showMap = async () => {
   });
 };
 
-loadBingAPI(API_KEY);
+loadBingAPI();

@@ -1,8 +1,8 @@
 import { ProductService } from "./product-service";
 
 const productService = new ProductService();
-const form = document.getElementById("formProduct");
-const imgPreview = document.getElementById("imgPreview");
+const form = document.getElementById("formProduct") as HTMLFormElement;
+const imgPreview = document.getElementById("imgPreview") as HTMLImageElement;
 
 form.fileName.addEventListener("change", () => {
     const file = form.fileName.files[0];
@@ -11,7 +11,7 @@ form.fileName.addEventListener("change", () => {
         fileReader.readAsDataURL(file);
   
         fileReader.addEventListener("load", () => {
-            imgPreview.src = fileReader.result;
+            imgPreview.src = fileReader.result as string;
         });
     }
 });

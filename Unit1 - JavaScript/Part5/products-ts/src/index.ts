@@ -3,7 +3,7 @@ import { ProductService } from "./product-service.js";
 import dayjs from "dayjs";
 
 const productService = new ProductService();
-const tbody = document.querySelector("#tabla tbody");
+const tbody = document.querySelector("#tabla tbody")!;
 
 async function deleteProd(e: Event): Promise<void> {
     try {
@@ -50,7 +50,7 @@ function showProduct(product: Product): void {
     const btnDel = document.createElement("button");
     btnDel.append("X");
     btnDel.classList.add("btn", "btn-danger");
-    btnDel.dataset.id = product.id;
+    btnDel.dataset.id = String(product.id);
     tdDel.append(btnDel);
 
     btnDel.addEventListener("click", deleteProd);
@@ -59,7 +59,7 @@ function showProduct(product: Product): void {
     tbody.append(tr);
 }
 
-async function getProducts() {
+async function getProducts(): Promise<void> {
     const products = await productService.getAll();
     products.forEach((p) => showProduct(p));
 }
