@@ -26,5 +26,17 @@ export class ProductsPageComponent {
     price: 96.95,
     imageUrl: 'assets/hand.jpg',
     rating: 4
+  },{
+    id: 3,
+    description: 'Chicken',
+    available: '2023-10-15',
+    price: 10,
+    imageUrl: 'assets/chicken.jpg',
+    rating: 2
   }];
+  showImage = true;
+
+  toggleImage() {
+    this.showImage = !this.showImage;
+  }
 }
