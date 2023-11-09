@@ -17,14 +17,14 @@ export class ProductsPageComponent {
     description: 'SSD hard drive',
     available: '2016-10-03',
     price: 75,
-    imageUrl: 'assets/ssd.jpg',
+    imageUrl: 'assets/dinosaur.jpg',
     rating: 5
   },{
     id: 2,
     description: 'LGA1151 Motherboard',
     available: '2016-09-15',
     price: 96.95,
-    imageUrl: 'assets/motherboard.jpg',
+    imageUrl: 'assets/hand.jpg',
     rating: 4
   }];
 }
