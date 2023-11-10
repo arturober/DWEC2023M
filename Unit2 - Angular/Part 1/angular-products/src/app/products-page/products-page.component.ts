@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../interfaces/product';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'products-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './products-page.component.html',
   styleUrl: './products-page.component.css'
 })
@@ -36,7 +37,41 @@ export class ProductsPageComponent {
   }];
   showImage = true;
 
+  newProduct!: Product;
+  fileName!: string;
+
+  constructor() {
+    this.resetForm();
+  }
+
   toggleImage() {
     this.showImage = !this.showImage;
+  }
+
+  changeImage(event: Event) {
+    const fileInput = event.target as HTMLInputElement;
+    if (!fileInput.files || fileInput.files.length === 0) return;
+    const reader = new FileReader();
+    reader.readAsDataURL(fileInput.files[0]);
+    reader.addEventListener('loadend', () => {
+      this.newProduct.imageUrl = reader.result as string;
+    });
+  }
+
+  addProduct() {
+    this.newProduct.id = Math.max(...this.products.map(p => p.id!)) + 1;
+    this.products.push(this.newProduct);
+    this.resetForm();
+  }
+
+  resetForm() {
+    this.newProduct = {
+      description: '',
+      price: 0,
+      available: '',
+      imageUrl: '',
+      rating: 0
+    }
+    this.fileName = '';
   }
 }
