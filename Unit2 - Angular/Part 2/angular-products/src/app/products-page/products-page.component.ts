@@ -66,8 +66,12 @@ export class ProductsPageComponent implements OnInit {
 
   addProduct() {
     this.newProduct.id = Math.max(...this.products.map(p => p.id!)) + 1;
-    this.products.push(this.newProduct);
+    this.products = [...this.products, this.newProduct];
     this.resetForm();
+  }
+
+  deleteProduct(product: Product) {
+    this.products = this.products.filter(p => p !== product);
   }
 
   resetForm() {

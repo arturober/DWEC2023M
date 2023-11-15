@@ -22,6 +22,7 @@
     "@angular-eslint/template-parser": "17.0.0",
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.1",
+    "@angular/localize": "^17.0.1",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",
@@ -53,7 +54,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "2902410656990176981"
+        "hash": "15124675374506832538"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -65,7 +66,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "7905188263060514895"
+        "hash": "16463657691363756773"
       },
       {
         "file": ".vscode/extensions.json",
@@ -89,11 +90,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "14420942601289415697"
+        "hash": "12803777206185279646"
       },
       {
         "file": "package.json",
-        "hash": "9959500336885015936"
+        "hash": "12084032018226143763"
       },
       {
         "file": "src/app/app.component.css",
@@ -120,16 +121,20 @@
         "hash": "12438642329844650608"
       },
       {
+        "file": "src/app/pipes/product-filter.pipe.ts",
+        "hash": "1605261047765669910"
+      },
+      {
         "file": "src/app/products-page/products-page.component.css",
         "hash": "2935210887978013104"
       },
       {
         "file": "src/app/products-page/products-page.component.html",
-        "hash": "16999390523965758288"
+        "hash": "11437554118324110568"
       },
       {
         "file": "src/app/products-page/products-page.component.ts",
-        "hash": "811563721978155692"
+        "hash": "11568446318480101718"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -189,7 +194,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "4927504514031276065"
+        "hash": "17848706507008380771"
       },
       {
         "file": "src/styles.css",
@@ -197,7 +202,7 @@
       },
       {
         "file": "tsconfig.app.json",
-        "hash": "17337579397915052279"
+        "hash": "1081049283653856346"
       },
       {
         "file": "tsconfig.json",
@@ -205,7 +210,7 @@
       },
       {
         "file": "tsconfig.spec.json",
-        "hash": "15575553540147145788"
+        "hash": "8544468366590402334"
       }
     ]
   }

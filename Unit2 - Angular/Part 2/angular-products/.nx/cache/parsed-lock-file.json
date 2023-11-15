@@ -243,6 +243,15 @@
         "hash": "sha512-FpmUf2kgzwZXVbFB4VrwbnrO0m88QLUBsDsbLfQVQQwb7KxwSaftUu/aIrjst1gFCdl9k0Vqtrq2gwLZKzdSGQ=="
       }
     },
+    "npm:@angular/localize": {
+      "type": "npm",
+      "name": "npm:@angular/localize",
+      "data": {
+        "version": "17.0.1",
+        "packageName": "@angular/localize",
+        "hash": "sha512-pNLLnEbXjoW1agKwA4cBcM/HnqGuwQMpIhx9H46Y/oC2JkAvTCMVyXLbZUESeXmhysC9x2JDmF+Awhu7JzVVCA=="
+      }
+    },
     "npm:@angular/platform-browser": {
       "type": "npm",
       "name": "npm:@angular/platform-browser",
@@ -9227,6 +9236,11 @@
     },
     {
       "source": "npm:@angular-devkit/build-angular",
+      "target": "npm:@angular/localize",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular-devkit/build-angular",
       "target": "npm:karma",
       "type": "static"
     },
@@ -10033,6 +10047,31 @@
     {
       "source": "npm:@angular/forms",
       "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular/localize",
+      "target": "npm:@angular/compiler",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular/localize",
+      "target": "npm:@angular/compiler-cli",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular/localize",
+      "target": "npm:@babel/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular/localize",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:@angular/localize",
+      "target": "npm:yargs",
       "type": "static"
     },
     {
