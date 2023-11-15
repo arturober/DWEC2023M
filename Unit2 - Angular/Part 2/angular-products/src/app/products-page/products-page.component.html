@@ -95,56 +95,31 @@
             placeholder="Filter..."
           />
         </div>
-        <div class="col-form-label col-sm-5">
-          Filtered by: {{ search }}
-        </div>
+        <div class="col-form-label col-sm-5">Filtered by: {{ search }}</div>
       </div>
     </form>
 
     @if (products.length) {
-    <div class="table-responsive">
-      <table class="table m-0">
-        <thead>
-          <tr>
-            <th>
-              <button
-                class="btn btn-sm"
-                [ngClass]="{
-                  'btn-danger': this.showImage,
-                  'btn-primary': !this.showImage,
-                }"
-                (click)="toggleImage()"
-              >
-                {{ showImage ? "Hide" : "Show" }} images
-              </button>
-            </th>
-            <th>{{ headers.description }}</th>
-            <th>{{ headers.price }}</th>
-            <th>{{ headers.available }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (product of (products | productFilter:search); track product.id; let even = $even) {
-          <tr [ngClass]="{ even: even }">
-            <td>
-              @if (showImage) {
-              <img
-                [src]="product.imageUrl"
-                alt=""
-                [title]="product.description | uppercase"
-              />
-              }
-            </td>
-            <td [ngStyle]="{ color: product.price < 50 ? 'red' : ' black' }">
-              {{ product.description }}
-            </td>
-            <td>{{ product.price | currency : "EUR" : "symbol" }}</td>
-            <td>{{ product.available | date : "dd/MM/yyyy" }}</td>
-          </tr>
-          }
-        </tbody>
-      </table>
-    </div>
+      <div class="row headers g-0">
+        <div class="col-2">
+          <button
+            class="btn btn-sm"
+            [ngClass]="{
+                      'btn-danger': this.showImage,
+                      'btn-primary': !this.showImage,
+                    }"
+            (click)="toggleImage()"
+          >
+            {{ showImage ? "Hide" : "Show" }} images
+          </button>
+        </div>
+        <div class="col-4 my-auto">{{ headers.description }}</div>
+        <div class="col my-auto">{{ headers.price }}</div>
+        <div class="col my-auto">{{ headers.available }}</div>
+      </div>
+      @for (product of products | productFilter:search; track product.id) {
+        <product-item [product]="product" [showImage]="showImage" class="row g-0" />
+      }
     } @else {
     <h3 class="p-4">No hay productos disponibles</h3>
     }

@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../interfaces/product';
 import { FormsModule } from '@angular/forms';
 import { ProductFilterPipe } from "../pipes/product-filter.pipe";
+import { ProductItemComponent } from '../product-item/product-item.component';
 
 @Component({
     selector: 'products-page',
     standalone: true,
     templateUrl: './products-page.component.html',
     styleUrl: './products-page.component.css',
-    imports: [CommonModule, FormsModule, ProductFilterPipe]
+    imports: [CommonModule, FormsModule, ProductFilterPipe, ProductItemComponent]
 })
 export class ProductsPageComponent implements OnInit {
   title = "My product's list";
