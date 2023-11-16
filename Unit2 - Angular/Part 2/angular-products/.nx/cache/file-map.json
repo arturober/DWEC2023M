@@ -10,6 +10,7 @@
     "@angular/platform-browser": "^17.0.1",
     "@angular/platform-browser-dynamic": "^17.0.1",
     "@angular/router": "^17.0.1",
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "bootstrap": "^5.3.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -54,19 +55,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "15124675374506832538"
+        "hash": "1931390203621191628"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "12445326913030762056"
+        "hash": "14038154978841212913"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "10509634114719818441"
+        "hash": "8045308689188882423"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "16463657691363756773"
+        "hash": "10801918286033863319"
       },
       {
         "file": ".vscode/extensions.json",
@@ -125,16 +126,28 @@
         "hash": "1605261047765669910"
       },
       {
+        "file": "src/app/product-item/product-item.component.css",
+        "hash": "14104552179926854336"
+      },
+      {
+        "file": "src/app/product-item/product-item.component.html",
+        "hash": "215479426926009835"
+      },
+      {
+        "file": "src/app/product-item/product-item.component.ts",
+        "hash": "1304504100011902635"
+      },
+      {
         "file": "src/app/products-page/products-page.component.css",
-        "hash": "2935210887978013104"
+        "hash": "8891823093888230787"
       },
       {
         "file": "src/app/products-page/products-page.component.html",
-        "hash": "11437554118324110568"
+        "hash": "15282751932141308343"
       },
       {
         "file": "src/app/products-page/products-page.component.ts",
-        "hash": "11568446318480101718"
+        "hash": "310594832977767376"
       },
       {
         "file": "src/assets/.gitkeep",

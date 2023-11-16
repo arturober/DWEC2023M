@@ -4,13 +4,14 @@ import { Product } from '../interfaces/product';
 import { FormsModule } from '@angular/forms';
 import { ProductFilterPipe } from "../pipes/product-filter.pipe";
 import { ProductItemComponent } from '../product-item/product-item.component';
+import { ProductFormComponent } from '../product-form/product-form.component';
 
 @Component({
     selector: 'products-page',
     standalone: true,
     templateUrl: './products-page.component.html',
     styleUrl: './products-page.component.css',
-    imports: [CommonModule, FormsModule, ProductFilterPipe, ProductItemComponent]
+    imports: [CommonModule, FormsModule, ProductFilterPipe, ProductItemComponent, ProductFormComponent]
 })
 export class ProductsPageComponent implements OnInit {
   title = "My product's list";
@@ -40,13 +41,6 @@ export class ProductsPageComponent implements OnInit {
   showImage = true;
   search = '';
 
-  newProduct!: Product;
-  fileName!: string;
-
-  constructor() {
-    this.resetForm();
-  }
-
   ngOnInit(): void {
     console.log('Products page has been initialized');
   }
@@ -55,34 +49,13 @@ export class ProductsPageComponent implements OnInit {
     this.showImage = !this.showImage;
   }
 
-  changeImage(event: Event) {
-    const fileInput = event.target as HTMLInputElement;
-    if (!fileInput.files || fileInput.files.length === 0) return;
-    const reader = new FileReader();
-    reader.readAsDataURL(fileInput.files[0]);
-    reader.addEventListener('loadend', () => {
-      this.newProduct.imageUrl = reader.result as string;
-    });
-  }
-
-  addProduct() {
-    this.newProduct.id = Math.max(...this.products.map(p => p.id!)) + 1;
-    this.products = [...this.products, this.newProduct];
-    this.resetForm();
+  addProduct(newProduct: Product) {
+    newProduct.id = Math.max(...this.products.map(p => p.id!)) + 1;
+    this.products = [...this.products, newProduct];
   }
 
   deleteProduct(product: Product) {
     this.products = this.products.filter(p => p !== product);
   }
 
-  resetForm() {
-    this.newProduct = {
-      description: '',
-      price: 0,
-      available: '',
-      imageUrl: '',
-      rating: 0
-    }
-    this.fileName = '';
-  }
 }

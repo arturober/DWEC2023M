@@ -1,81 +1,4 @@
-<div class="card mb-4">
-  <div class="card-header bg-success text-white">Add product</div>
-  <div class="card-body">
-    <form (ngSubmit)="addProduct()">
-      <div class="mb-3 row">
-        <label for="description" class="col-sm-2 col-form-label text-sm-end"
-          >Description</label
-        >
-        <div class="col-sm-10">
-          <input
-            type="text"
-            class="form-control"
-            id="description"
-            name="description"
-            [(ngModel)]="newProduct.description"
-          />
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="price" class="col-sm-2 col-form-label text-sm-end"
-          >Price</label
-        >
-        <div class="col-sm-10">
-          <input
-            type="number"
-            class="form-control"
-            id="price"
-            name="price"
-            [(ngModel)]="newProduct.price"
-          />
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="available" class="col-sm-2 col-form-label text-sm-end"
-          >Available</label
-        >
-        <div class="col-sm-10">
-          <input
-            type="date"
-            class="form-control"
-            id="available"
-            name="available"
-            [(ngModel)]="newProduct.available"
-          />
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="image" class="col-sm-2 col-form-label text-sm-end">
-          Image</label
-        >
-        <div class="col-sm-10">
-          <input
-            type="file"
-            class="form-control"
-            id="image"
-            accept="image/*"
-            (change)="changeImage($event)"
-            name="fileName"
-            [(ngModel)]="fileName"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10 offset-sm-2">
-          <img class="product-img" alt="" [src]="newProduct.imageUrl" />
-        </div>
-      </div>
-
-      <div class="mb-3 row">
-        <div class="offset-sm-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Card con la lista de productos aquí -->
+<product-form (add)="addProduct($event)"></product-form>
 
 <div class="card mb-4">
   <div class="card-header bg-primary text-white">{{ title }}</div>
@@ -116,6 +39,7 @@
         <div class="col-4 my-auto">{{ headers.description }}</div>
         <div class="col my-auto">{{ headers.price }}</div>
         <div class="col my-auto">{{ headers.available }}</div>
+        <div class="col my-auto">Rating</div>
       </div>
       @for (product of products | productFilter:search; track product.id) {
         <product-item [product]="product" [showImage]="showImage" class="row g-0" />
