@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Product } from '../interfaces/product';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
 import { ProductsService } from '../services/products.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'product-item',
   standalone: true,
-  imports: [CommonModule, StarRatingComponent],
+  imports: [CommonModule, StarRatingComponent, RouterLink],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css',
 })

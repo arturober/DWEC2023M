@@ -22,6 +22,12 @@ export class ProductsService {
       .pipe(map((resp) => resp.products));
   }
 
+  getProduct(id: number): Observable<Product> {
+    return this.#http
+    .get<SingleProductResponse>(`${this.#productsUrl}/${id}`)
+    .pipe(map((resp) => resp.product));
+  }
+
   addProduct(product: Product): Observable<Product> {
     return this.#http
       .post<SingleProductResponse>(this.#productsUrl, product)

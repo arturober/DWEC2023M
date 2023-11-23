@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Product } from '../interfaces/product';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Product } from '../interfaces/product';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -12,11 +13,11 @@ import { ProductsService } from '../services/products.service';
   styleUrl: './product-form.component.css'
 })
 export class ProductFormComponent {
-  @Output() add = new EventEmitter<Product>();
   newProduct!: Product;
   fileName!: string;
 
   #productsService = inject(ProductsService);
+  #router = inject(Router);
 
   constructor() {
     this.resetForm();
@@ -34,10 +35,9 @@ export class ProductFormComponent {
 
   addProduct() {
     this.#productsService.addProduct(this.newProduct).subscribe({
-      next: (product) => this.add.emit(product),
+      next: () => this.#router.navigate(['/products']),
       error: (error) => console.error(error)
     });
-    this.resetForm();
   }
 
   resetForm() {
@@ -46,7 +46,7 @@ export class ProductFormComponent {
       price: 0,
       available: '',
       imageUrl: '',
-      rating: 0
+      rating: 1
     }
     this.fileName = '';
   }

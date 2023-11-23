@@ -55,7 +55,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "10528110237553619632"
+        "hash": "6060573666038589949"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "8315721871191962395"
+        "hash": "12967878003923144818"
       },
       {
         "file": ".vscode/extensions.json",
@@ -111,11 +111,15 @@
       },
       {
         "file": "src/app/app.config.ts",
-        "hash": "9623446390942582138"
+        "hash": "17389558245892336261"
       },
       {
         "file": "src/app/app.routes.ts",
         "hash": "12397496131277534773"
+      },
+      {
+        "file": "src/app/interceptors/base-url.interceptor.ts",
+        "hash": "2881820552039423156"
       },
       {
         "file": "src/app/interfaces/product.ts",
@@ -139,7 +143,7 @@
       },
       {
         "file": "src/app/product-form/product-form.component.ts",
-        "hash": "16657535912712854097"
+        "hash": "1285611094403622517"
       },
       {
         "file": "src/app/product-item/product-item.component.css",
@@ -147,11 +151,11 @@
       },
       {
         "file": "src/app/product-item/product-item.component.html",
-        "hash": "14919998430557322197"
+        "hash": "11595106971858586041"
       },
       {
         "file": "src/app/product-item/product-item.component.ts",
-        "hash": "15561995115222149157"
+        "hash": "517231743646514137"
       },
       {
         "file": "src/app/products-page/products-page.component.css",
@@ -159,7 +163,7 @@
       },
       {
         "file": "src/app/products-page/products-page.component.html",
-        "hash": "10074708370338882526"
+        "hash": "17892434228397739370"
       },
       {
         "file": "src/app/products-page/products-page.component.ts",
@@ -167,7 +171,7 @@
       },
       {
         "file": "src/app/services/products.service.ts",
-        "hash": "7994514902613000955"
+        "hash": "8434343997185048475"
       },
       {
         "file": "src/app/star-rating/star-rating.component.css",
@@ -175,11 +179,11 @@
       },
       {
         "file": "src/app/star-rating/star-rating.component.html",
-        "hash": "4350791743061299762"
+        "hash": "16189120327543774335"
       },
       {
         "file": "src/app/star-rating/star-rating.component.ts",
-        "hash": "11927279305979143457"
+        "hash": "12022692859107299538"
       },
       {
         "file": "src/assets/.gitkeep",
