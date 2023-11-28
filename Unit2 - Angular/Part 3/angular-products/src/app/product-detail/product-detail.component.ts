@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   Component,
   Input,
-  inject,
-  numberAttribute
+  inject
 } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Product } from '../interfaces/product';
@@ -18,17 +17,10 @@ import { StarRatingComponent } from '../star-rating/star-rating.component';
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
-  @Input({ transform: numberAttribute })
-  set id(id: number) {
-    this.#productsService
-      .getProduct(id)
-      .subscribe((p) => (this.product = p));
-  }
+  @Input() product!: Product;
 
   #productsService = inject(ProductsService);
   #router = inject(Router);
-
-  product?: Product;
 
   changeRating(rating: number) {
     const oldRating = this.product!.rating;

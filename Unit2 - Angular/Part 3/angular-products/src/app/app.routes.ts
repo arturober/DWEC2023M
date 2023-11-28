@@ -3,6 +3,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { numericIdGuard } from './guards/numeric-id.guard';
+import { leavePageGuard } from './guards/leave-page.guard';
+import { productResolver } from './resolvers/product.resolver';
 
 export const routes: Routes = [
   {
@@ -13,11 +15,15 @@ export const routes: Routes = [
   {
     path: 'products/add',
     title: 'New product | Angular products',
+    canDeactivate: [leavePageGuard],
     component: ProductFormComponent,
   },
   {
     path: 'products/:id',
     canActivate: [numericIdGuard],
+    resolve: {
+      product: productResolver
+    },
     component: ProductDetailComponent,
   },
   { path: '', redirectTo: '/products', pathMatch: 'full' },

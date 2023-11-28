@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CanDeactivateComponent } from '../interfaces/can-deactivate-component';
 import { Product } from '../interfaces/product';
 import { ProductsService } from '../services/products.service';
 
@@ -12,15 +13,27 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
 })
-export class ProductFormComponent {
+export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
   fileName!: string;
+  saved = false;
 
   #productsService = inject(ProductsService);
   #router = inject(Router);
 
   constructor() {
     this.resetForm();
+    const newProduct = localStorage.getItem("newProduct");
+    if(newProduct) {
+      this.newProduct = JSON.parse(newProduct);
+    }
+  }
+
+  canDeactivate() {
+    if(!this.saved) localStorage.setItem("newProduct", JSON.stringify(this.newProduct));
+    return true;
+
+    // return this.saved || confirm('Do you want to leave this page?. Changes canbe lost');
   }
 
   changeImage(event: Event) {
@@ -35,7 +48,11 @@ export class ProductFormComponent {
 
   addProduct() {
     this.#productsService.addProduct(this.newProduct).subscribe({
-      next: () => this.#router.navigate(['/products']),
+      next: () => {
+        this.saved = true;
+        localStorage.removeItem("newProduct");
+        this.#router.navigate(['/products']);
+      },
       error: (error) => console.error(error)
     });
   }
