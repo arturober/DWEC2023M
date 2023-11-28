@@ -6,6 +6,7 @@ import { ProductFilterPipe } from '../pipes/product-filter.pipe';
 import { ProductFormComponent } from '../product-form/product-form.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { ProductsService } from '../services/products.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'products-page',
@@ -18,6 +19,7 @@ import { ProductsService } from '../services/products.service';
     ProductFilterPipe,
     ProductItemComponent,
     ProductFormComponent,
+    RouterLink
   ],
 })
 export class ProductsPageComponent implements OnInit {
