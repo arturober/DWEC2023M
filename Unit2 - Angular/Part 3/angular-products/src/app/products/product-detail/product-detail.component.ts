@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Product } from '../interfaces/product';
+import { StarRatingComponent } from '../../star-rating/star-rating.component';
 import { ProductsService } from '../services/products.service';
-import { StarRatingComponent } from '../star-rating/star-rating.component';
 
 @Component({
   selector: 'product-detail',

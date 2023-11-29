@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CanDeactivateComponent } from '../interfaces/can-deactivate-component';
-import { Product } from '../interfaces/product';
+import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
+import { Product } from '../interfaces/product';
 
 @Component({
   selector: 'product-form',

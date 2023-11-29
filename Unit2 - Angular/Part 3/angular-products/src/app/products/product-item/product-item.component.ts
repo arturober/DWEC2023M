@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../interfaces/product';
-import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { StarRatingComponent } from '../../star-rating/star-rating.component';
 import { ProductsService } from '../services/products.service';
 import { RouterLink } from '@angular/router';
 
