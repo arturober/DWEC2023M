@@ -5,17 +5,17 @@ import { Router } from '@angular/router';
 import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../interfaces/product';
+import { MinDateDirective } from '../../validators/min-date.directive';
 
 @Component({
   selector: 'product-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MinDateDirective],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
 })
 export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
-  fileName!: string;
   saved = false;
 
   #productsService = inject(ProductsService);
@@ -65,6 +65,5 @@ export class ProductFormComponent implements CanDeactivateComponent {
       imageUrl: '',
       rating: 1
     }
-    this.fileName = '';
   }
 }

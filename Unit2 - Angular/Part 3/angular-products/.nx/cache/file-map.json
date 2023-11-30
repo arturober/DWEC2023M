@@ -55,7 +55,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "17659122045754499854"
+        "hash": "3253305071008657500"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "11182065439391934654"
+        "hash": "3768560786284498079"
       },
       {
         "file": ".vscode/extensions.json",
@@ -111,7 +111,7 @@
       },
       {
         "file": "src/app/app.config.ts",
-        "hash": "9995574676139834256"
+        "hash": "1947962406090291997"
       },
       {
         "file": "src/app/app.routes.ts",

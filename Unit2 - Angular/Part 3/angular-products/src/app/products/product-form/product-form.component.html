@@ -12,8 +12,32 @@
             class="form-control"
             id="description"
             name="description"
+            minlength="5"
+            maxlength="60"
+            required
             [(ngModel)]="newProduct.description"
+            #descModel="ngModel"
+            [ngClass]="{
+              'is-valid': descModel.touched && descModel.valid,
+              'is-invalid': descModel.touched && !descModel.valid
+            }"
           />
+          @if(descModel.errors?.['required']) {
+            <div class="invalid-feedback">
+              Description cannot be empty
+            </div>
+          }
+          @if(descModel.errors?.['minlength']) {
+            <div class="invalid-feedback">
+              You must enter at least
+              {{descModel.errors?.['minlength'].requiredLength - descModel.errors?.['minlength'].actualLength}}
+              characters more
+            </div>
+          }
+          <div>Dirty: {{ descModel.dirty }}</div>
+          <div>Valid: {{ descModel.valid }}</div>
+          <div>Value: {{ descModel.value }}</div>
+          <div>Errors: {{ descModel.errors | json }}</div>
         </div>
       </div>
       <div class="mb-3 row">
@@ -26,6 +50,7 @@
             class="form-control"
             id="price"
             name="price"
+            required
             [(ngModel)]="newProduct.price"
           />
         </div>
@@ -40,8 +65,25 @@
             class="form-control"
             id="available"
             name="available"
+            required
+            [minDate]="'2023-09-01'"
             [(ngModel)]="newProduct.available"
+            #availModel="ngModel"
+            [ngClass]="{
+              'is-valid': availModel.touched && availModel.valid,
+              'is-invalid': availModel.touched && !availModel.valid
+            }"
           />
+          @if(availModel.errors?.['required']) {
+            <div class="invalid-feedback">
+              Date cannot be empty
+            </div>
+          }
+          @if(availModel.errors?.['minDate']) {
+            <div class="invalid-feedback">
+              Date must be at least {{ '2023-09-01' | date:'dd/MM/yyyy' }}
+            </div>
+          }
         </div>
       </div>
       <div class="mb-3 row">
@@ -56,8 +98,17 @@
             accept="image/*"
             (change)="changeImage($event)"
             name="fileName"
-            [(ngModel)]="fileName"
+            required
+            ngModel
+            #imageModel="ngModel"
+            [ngClass]="{
+              'is-valid': imageModel.touched && imageModel.valid,
+              'is-invalid': imageModel.touched && !imageModel.valid
+            }"
           />
+          <div class="invalid-feedback">
+            Image is required
+          </div>
         </div>
       </div>
       <div class="row">
