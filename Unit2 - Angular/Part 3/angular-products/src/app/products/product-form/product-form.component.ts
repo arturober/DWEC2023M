@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, ViewChild, inject } from '@angular/core';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
@@ -21,19 +21,14 @@ export class ProductFormComponent implements CanDeactivateComponent {
   #productsService = inject(ProductsService);
   #router = inject(Router);
 
+  @ViewChild('addForm') addForm!: NgForm;
+
   constructor() {
     this.resetForm();
-    const newProduct = localStorage.getItem("newProduct");
-    if(newProduct) {
-      this.newProduct = JSON.parse(newProduct);
-    }
   }
 
   canDeactivate() {
-    if(!this.saved) localStorage.setItem("newProduct", JSON.stringify(this.newProduct));
-    return true;
-
-    // return this.saved || confirm('Do you want to leave this page?. Changes canbe lost');
+    return this.saved || this.addForm.pristine || confirm('Do you want to leave this page?. Changes canbe lost');
   }
 
   changeImage(event: Event) {
@@ -55,6 +50,13 @@ export class ProductFormComponent implements CanDeactivateComponent {
       },
       error: (error) => console.error(error)
     });
+  }
+
+  validClasses(ngModel: NgModel, validClass: string, errorClass: string) {
+    return {
+      [validClass]: ngModel.touched && ngModel.valid,
+      [errorClass]: ngModel.touched && ngModel.invalid
+    };
   }
 
   resetForm() {

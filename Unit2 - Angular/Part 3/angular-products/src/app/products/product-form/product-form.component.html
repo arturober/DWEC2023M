@@ -1,7 +1,7 @@
 <div class="card mb-4">
   <div class="card-header bg-success text-white">Add product</div>
   <div class="card-body">
-    <form (ngSubmit)="addProduct()">
+    <form (ngSubmit)="addProduct()" #addForm="ngForm">
       <div class="mb-3 row">
         <label for="description" class="col-sm-2 col-form-label text-sm-end"
           >Description</label
@@ -17,10 +17,7 @@
             required
             [(ngModel)]="newProduct.description"
             #descModel="ngModel"
-            [ngClass]="{
-              'is-valid': descModel.touched && descModel.valid,
-              'is-invalid': descModel.touched && !descModel.valid
-            }"
+            [ngClass]="validClasses(descModel, 'is-valid', 'is-invalid')"
           />
           @if(descModel.errors?.['required']) {
             <div class="invalid-feedback">
@@ -50,9 +47,23 @@
             class="form-control"
             id="price"
             name="price"
+            step="0.01"
             required
+            [min]="0.01"
             [(ngModel)]="newProduct.price"
+            #priceModel="ngModel"
+            [ngClass]="validClasses(priceModel, 'is-valid', 'is-invalid')"
           />
+          @if(priceModel.errors?.['required']) {
+            <div class="invalid-feedback">
+              Price cannot be empty
+            </div>
+          }
+          @if(priceModel.errors?.['min']) {
+            <div class="invalid-feedback">
+              Minimum price is 0.01€
+            </div>
+          }
         </div>
       </div>
       <div class="mb-3 row">
@@ -69,10 +80,7 @@
             [minDate]="'2023-09-01'"
             [(ngModel)]="newProduct.available"
             #availModel="ngModel"
-            [ngClass]="{
-              'is-valid': availModel.touched && availModel.valid,
-              'is-invalid': availModel.touched && !availModel.valid
-            }"
+            [ngClass]="validClasses(availModel, 'is-valid', 'is-invalid')"
           />
           @if(availModel.errors?.['required']) {
             <div class="invalid-feedback">
@@ -101,10 +109,7 @@
             required
             ngModel
             #imageModel="ngModel"
-            [ngClass]="{
-              'is-valid': imageModel.touched && imageModel.valid,
-              'is-invalid': imageModel.touched && !imageModel.valid
-            }"
+            [ngClass]="validClasses(imageModel, 'is-valid', 'is-invalid')"
           />
           <div class="invalid-feedback">
             Image is required
@@ -119,7 +124,7 @@
 
       <div class="mb-3 row">
         <div class="offset-sm-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
         </div>
       </div>
     </form>
