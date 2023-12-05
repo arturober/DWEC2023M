@@ -11,13 +11,15 @@ import { OneCheckedDirective } from '../../validators/one-checked.directive';
 @Component({
   selector: 'product-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MinDateDirective, OneCheckedDirective],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
 })
 export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
   saved = false;
+  daysOpen = [false, false, false, false, false, false, false];
+  days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fry', 'Sat'];
 
   #productsService = inject(ProductsService);
   #router = inject(Router);
