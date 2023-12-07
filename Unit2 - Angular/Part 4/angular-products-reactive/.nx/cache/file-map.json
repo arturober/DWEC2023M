@@ -55,7 +55,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "11942340031312993641"
+        "hash": "7304952086867314492"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "1576905471507953137"
+        "hash": "126997713843757832"
       },
       {
         "file": ".vscode/extensions.json",
@@ -163,11 +163,11 @@
       },
       {
         "file": "src/app/products/product-form/product-form.component.html",
-        "hash": "7010580849685050039"
+        "hash": "11267177183007894246"
       },
       {
         "file": "src/app/products/product-form/product-form.component.ts",
-        "hash": "12725758234347429449"
+        "hash": "8862125561823376757"
       },
       {
         "file": "src/app/products/product-item/product-item.component.css",
@@ -216,10 +216,6 @@
       {
         "file": "src/app/star-rating/star-rating.component.ts",
         "hash": "12022692859107299538"
-      },
-      {
-        "file": "src/app/validators/min-date.directive.ts",
-        "hash": "2568364021662390640"
       },
       {
         "file": "src/app/welcome/welcome.component.css",

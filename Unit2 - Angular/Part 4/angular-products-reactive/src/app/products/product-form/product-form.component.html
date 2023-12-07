@@ -1,7 +1,7 @@
 <div class="card mb-4">
   <div class="card-header bg-success text-white">Add product</div>
   <div class="card-body">
-    <form (ngSubmit)="addProduct()" #addForm="ngForm">
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()">
       <div class="mb-3 row">
         <label for="description" class="col-sm-2 col-form-label text-sm-end"
           >Description</label
@@ -11,27 +11,19 @@
             type="text"
             class="form-control"
             id="description"
-            name="description"
-            minlength="5"
-            maxlength="60"
-            required
-            [(ngModel)]="newProduct.description"
-            #descModel="ngModel"
-            [ngClass]="validClasses(descModel, 'is-valid', 'is-invalid')"
+            formControlName="description"
+            [ngClass]="validClasses(description, 'is-valid', 'is-invalid')"
           />
-          @if(descModel.errors?.['required']) {
-          <div class="invalid-feedback">Description cannot be empty</div>
-          } @if(descModel.errors?.['minlength']) {
-          <div class="invalid-feedback">
-            You must enter at least
-            {{descModel.errors?.['minlength'].requiredLength - descModel.errors?.['minlength'].actualLength}}
-            characters more
-          </div>
+          @if(description.errors?.['required']) {
+            <div class="invalid-feedback">Description cannot be empty</div>
           }
-          <div>Dirty: {{ descModel.dirty }}</div>
-          <div>Valid: {{ descModel.valid }}</div>
-          <div>Value: {{ descModel.value }}</div>
-          <div>Errors: {{ descModel.errors | json }}</div>
+          @if(description.errors?.['minlength']) {
+            <div class="invalid-feedback">
+              You must enter at least
+              {{description.errors?.['minlength'].requiredLength - description.errors?.['minlength'].actualLength}}
+              characters more
+            </div>
+          }
         </div>
       </div>
       <div class="mb-3 row">
@@ -43,19 +35,9 @@
             type="number"
             class="form-control"
             id="price"
-            name="price"
+            formControlName="price"
             step="0.01"
-            required
-            [min]="0.01"
-            [(ngModel)]="newProduct.price"
-            #priceModel="ngModel"
-            [ngClass]="validClasses(priceModel, 'is-valid', 'is-invalid')"
           />
-          @if(priceModel.errors?.['required']) {
-          <div class="invalid-feedback">Price cannot be empty</div>
-          } @if(priceModel.errors?.['min']) {
-          <div class="invalid-feedback">Minimum price is 0.01€</div>
-          }
         </div>
       </div>
       <div class="mb-3 row">
@@ -67,20 +49,8 @@
             type="date"
             class="form-control"
             id="available"
-            name="available"
-            required
-            [minDate]="'2023-09-01'"
-            [(ngModel)]="newProduct.available"
-            #availModel="ngModel"
-            [ngClass]="validClasses(availModel, 'is-valid', 'is-invalid')"
+            formControlName="available"
           />
-          @if(availModel.errors?.['required']) {
-          <div class="invalid-feedback">Date cannot be empty</div>
-          } @if(availModel.errors?.['minDate']) {
-          <div class="invalid-feedback">
-            Date must be at least {{ "2023-09-01" | date : "dd/MM/yyyy" }}
-          </div>
-          }
         </div>
       </div>
       <div class="mb-3 row">
@@ -94,49 +64,24 @@
             id="image"
             accept="image/*"
             (change)="changeImage($event)"
-            name="fileName"
-            required
-            ngModel
-            #imageModel="ngModel"
-            [ngClass]="validClasses(imageModel, 'is-valid', 'is-invalid')"
+            formControlName="imageUrl"
           />
           <div class="invalid-feedback">Image is required</div>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-10 offset-sm-2">
-          <img class="product-img" alt="" [src]="newProduct.imageUrl" />
+          <img class="product-img" alt="" [src]="imageBase64" />
         </div>
-      </div>
-      <div class="mb-3" ngModelGroup="daysGroup" #daysModel="ngModelGroup" oneChecked>
-        @for(day of days; track day; let i = $index) {
-        <div class="form-check form-check-inline">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            [name]="day"
-            [id]="day"
-            [(ngModel)]="daysOpen[i]"
-          />
-          <label [for]="day" class="form-check-label">{{day}}</label>
-        </div>
-        }
-        @if(daysModel.invalid) {
-          <div class="text-danger">You must select at least one day</div>
-        }
       </div>
 
       <div class="mb-3 row">
         <div class="offset-sm-2 col-sm-10">
-          <button
-            type="submit"
-            class="btn btn-primary"
-            [disabled]="addForm.invalid"
-          >
-            Submit
-          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Submit</button>
         </div>
       </div>
     </form>
   </div>
 </div>
+
+{{productForm.valid}}

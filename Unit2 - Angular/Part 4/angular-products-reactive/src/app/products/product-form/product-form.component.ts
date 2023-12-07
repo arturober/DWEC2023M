@@ -1,25 +1,35 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, inject } from '@angular/core';
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { FormControl, NgForm, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../interfaces/product';
-import { MinDateDirective } from '../../validators/min-date.directive';
-import { OneCheckedDirective } from '../../validators/one-checked.directive';
 
 @Component({
   selector: 'product-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, MinDateDirective, OneCheckedDirective],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
 })
 export class ProductFormComponent implements CanDeactivateComponent {
-  newProduct!: Product;
   saved = false;
-  daysOpen = [false, false, false, false, false, false, false];
-  days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fry', 'Sat'];
+  imageBase64 = '';
+
+  #fb = inject(NonNullableFormBuilder);
+
+  description = this.#fb.control('', [Validators.required, Validators.minLength(5)]);
+  price = this.#fb.control(0, [Validators.required, Validators.min(0.1)]);
+  available = this.#fb.control('', Validators.required);
+  imageUrl = this.#fb.control('', Validators.required);
+
+  productForm = this.#fb.group({
+    description: this.description,
+    price: this.price,
+    available: this.available,
+    imageUrl: this.imageUrl,
+  });
 
   #productsService = inject(ProductsService);
   #router = inject(Router);
@@ -40,12 +50,17 @@ export class ProductFormComponent implements CanDeactivateComponent {
     const reader = new FileReader();
     reader.readAsDataURL(fileInput.files[0]);
     reader.addEventListener('loadend', () => {
-      this.newProduct.imageUrl = reader.result as string;
+      this.imageBase64 = reader.result as string;
     });
   }
 
   addProduct() {
-    this.#productsService.addProduct(this.newProduct).subscribe({
+    const product: Product = {
+      ...this.productForm.getRawValue(),
+      rating: 1,
+      imageUrl: this.imageBase64,
+    };
+    this.#productsService.addProduct(product).subscribe({
       next: () => {
         this.saved = true;
         localStorage.removeItem("newProduct");
@@ -55,20 +70,14 @@ export class ProductFormComponent implements CanDeactivateComponent {
     });
   }
 
-  validClasses(ngModel: NgModel, validClass: string, errorClass: string) {
+  validClasses(control: FormControl, validClass: string, errorClass: string) {
     return {
-      [validClass]: ngModel.touched && ngModel.valid,
-      [errorClass]: ngModel.touched && ngModel.invalid
+      [validClass]: control.touched && control.valid,
+      [errorClass]: control.touched && control.invalid
     };
   }
 
   resetForm() {
-    this.newProduct = {
-      description: '',
-      price: 0,
-      available: '',
-      imageUrl: '',
-      rating: 1
-    }
+    this.productForm.reset();
   }
 }
