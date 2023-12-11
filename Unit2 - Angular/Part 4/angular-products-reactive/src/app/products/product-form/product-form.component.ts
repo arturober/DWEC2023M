@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../interfaces/product';
+import { minDateValidator } from '../../validators/min-date.validator';
 
 @Component({
   selector: 'product-form',
@@ -21,7 +22,7 @@ export class ProductFormComponent implements CanDeactivateComponent {
 
   description = this.#fb.control('', [Validators.required, Validators.minLength(5)]);
   price = this.#fb.control(0, [Validators.required, Validators.min(0.1)]);
-  available = this.#fb.control('', Validators.required);
+  available = this.#fb.control('', [Validators.required, minDateValidator('2023-09-01')]);
   imageUrl = this.#fb.control('', Validators.required);
 
   productForm = this.#fb.group({
