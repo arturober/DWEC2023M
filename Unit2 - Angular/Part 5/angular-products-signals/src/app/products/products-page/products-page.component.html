@@ -1,0 +1,52 @@
+<div class="card mb-4">
+  <div class="card-header bg-primary text-white">{{ title }}</div>
+  <div class="card-block">
+    <form class="form p-3 border-bottom">
+      <div class="form-group row">
+        <label class="col-form-label col-sm-2 text-sm-end" for="filterDesc"
+          >Filter:</label
+        >
+        <div class="col-sm-5">
+          <input
+            type="text"
+            [ngModel]="search()"
+            (ngModelChange)="search.set($event)"
+            class="form-control"
+            name="filterDesc"
+            id="filterDesc"
+            placeholder="Filter..."
+          />
+        </div>
+        <div class="col-form-label col-sm-5">Filtered by: {{ search() }}</div>
+      </div>
+    </form>
+
+    @if (true) {
+      <div class="row headers g-0">
+        <div class="col-2">
+          <button
+            class="btn btn-sm"
+            [ngClass]="{
+                      'btn-danger': this.showImage(),
+                      'btn-primary': !this.showImage(),
+                    }"
+            (click)="toggleImage()"
+          >
+            {{ showImage() ? "Hide" : "Show" }} images
+          </button>
+        </div>
+        <div class="col-3 my-auto">{{ headers.description }}</div>
+        <div class="col my-auto">{{ headers.price }}</div>
+        <div class="col my-auto">{{ headers.available }}</div>
+        <div class="col my-auto">Rating</div>
+        <div class="col-1 my-auto"></div>
+      </div>
+      @for (product of filteredProducts(); track product.id) {
+        <product-item [product]="product" [showImage]="showImage()"
+          (deleted)="deleteProduct(product)" class="row g-0" />
+      }
+    } @else {
+    <h3 class="p-4">No hay productos disponibles</h3>
+    }
+  </div>
+</div>
