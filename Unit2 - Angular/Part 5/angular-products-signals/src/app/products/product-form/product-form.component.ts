@@ -7,22 +7,26 @@ import { ProductsService } from '../services/products.service';
 import { Product } from '../interfaces/product';
 import { MinDateDirective } from '../../validators/min-date.directive';
 import { OneCheckedDirective } from '../../validators/one-checked.directive';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmModalComponent } from '../../modals/confirm-modal/confirm-modal.component';
 
 @Component({
   selector: 'product-form',
   standalone: true,
   imports: [CommonModule, FormsModule, MinDateDirective, OneCheckedDirective],
   templateUrl: './product-form.component.html',
-  styleUrl: './product-form.component.css'
+  styleUrl: './product-form.component.css',
 })
 export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
   saved = false;
-  daysOpen = [false, false, false, false, false, false, false];
-  days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fry', 'Sat'];
+  // daysOpen = [false, false, false, false, false, false, false];
+  // days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fry', 'Sat'];
 
   #productsService = inject(ProductsService);
   #router = inject(Router);
+  #modalService = inject(NgbModal);
+
 
   @ViewChild('addForm') addForm!: NgForm;
 
@@ -31,7 +35,12 @@ export class ProductFormComponent implements CanDeactivateComponent {
   }
 
   canDeactivate() {
-    return this.saved || this.addForm.pristine || confirm('Do you want to leave this page?. Changes canbe lost');
+    if (this.saved || this.addForm.pristine) return true;
+
+    const modalRef = this.#modalService.open(ConfirmModalComponent);
+    modalRef.componentInstance.title = 'Changes not saved';
+    modalRef.componentInstance.body = 'Do you want to leave the page?';
+    return modalRef.result.catch(() => false);
   }
 
   changeImage(event: Event) {
@@ -48,17 +57,17 @@ export class ProductFormComponent implements CanDeactivateComponent {
     this.#productsService.addProduct(this.newProduct).subscribe({
       next: () => {
         this.saved = true;
-        localStorage.removeItem("newProduct");
+        localStorage.removeItem('newProduct');
         this.#router.navigate(['/products']);
       },
-      error: (error) => console.error(error)
+      error: (error) => console.error(error),
     });
   }
 
   validClasses(ngModel: NgModel, validClass: string, errorClass: string) {
     return {
       [validClass]: ngModel.touched && ngModel.valid,
-      [errorClass]: ngModel.touched && ngModel.invalid
+      [errorClass]: ngModel.touched && ngModel.invalid,
     };
   }
 
@@ -68,7 +77,7 @@ export class ProductFormComponent implements CanDeactivateComponent {
       price: 0,
       available: '',
       imageUrl: '',
-      rating: 1
-    }
+      rating: 1,
+    };
   }
 }

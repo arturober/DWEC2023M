@@ -10,7 +10,14 @@
     "@angular/platform-browser": "^17.0.1",
     "@angular/platform-browser-dynamic": "^17.0.1",
     "@angular/router": "^17.0.1",
+    "@fortawesome/angular-fontawesome": "^0.14.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@ng-bootstrap/ng-bootstrap": "^16.0.0",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -55,19 +62,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "6535078098128946391"
+        "hash": "10906850201623220087"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "6018116336344326459"
+        "hash": "8482817228177063915"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "5364620567468947982"
+        "hash": "15223959358803779182"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "5605455395600076054"
+        "hash": "8381375423746574521"
       },
       {
         "file": ".vscode/extensions.json",
@@ -87,15 +94,15 @@
       },
       {
         "file": "angular.json",
-        "hash": "5157507062991381539"
+        "hash": "7661816816460153110"
       },
       {
         "file": "package-lock.json",
-        "hash": "10535552362149320794"
+        "hash": "15407850126754240805"
       },
       {
         "file": "package.json",
-        "hash": "11469201075033015046"
+        "hash": "3367534837491702390"
       },
       {
         "file": "src/app/app.component.css",
@@ -207,15 +214,15 @@
       },
       {
         "file": "src/app/star-rating/star-rating.component.css",
-        "hash": "15023590486734932180"
+        "hash": "15993209175634458467"
       },
       {
         "file": "src/app/star-rating/star-rating.component.html",
-        "hash": "16189120327543774335"
+        "hash": "2114068742042920728"
       },
       {
         "file": "src/app/star-rating/star-rating.component.ts",
-        "hash": "12022692859107299538"
+        "hash": "6664828611310199709"
       },
       {
         "file": "src/app/validators/min-date.directive.ts",

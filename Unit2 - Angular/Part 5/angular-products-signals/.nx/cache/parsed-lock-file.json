@@ -1872,6 +1872,24 @@
         "hash": "sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ=="
       }
     },
+    "npm:@fortawesome/angular-fontawesome": {
+      "type": "npm",
+      "name": "npm:@fortawesome/angular-fontawesome",
+      "data": {
+        "version": "0.14.0",
+        "packageName": "@fortawesome/angular-fontawesome",
+        "hash": "sha512-nB7an9t66nY0m/1MIBOIvi+vKyZaTskhtGtQwGTiMyte3Bmy9080pFpXguyox68/vxGVmLxZkRxYIgjMCvm7QQ=="
+      }
+    },
+    "npm:@fortawesome/fontawesome-common-types": {
+      "type": "npm",
+      "name": "npm:@fortawesome/fontawesome-common-types",
+      "data": {
+        "version": "6.5.1",
+        "packageName": "@fortawesome/fontawesome-common-types",
+        "hash": "sha512-GkWzv+L6d2bI5f/Vk6ikJ9xtl7dfXtoRu3YGE6nq0p/FFqA1ebMOAWg3XgRyb0I6LYyYkiAo+3/KrwuBp8xG7A=="
+      }
+    },
     "npm:@fortawesome/fontawesome-free": {
       "type": "npm",
       "name": "npm:@fortawesome/fontawesome-free",
@@ -1879,6 +1897,42 @@
         "version": "6.4.2",
         "packageName": "@fortawesome/fontawesome-free",
         "hash": "sha512-m5cPn3e2+FDCOgi1mz0RexTUvvQibBebOUlUlW0+YrMjDTPkiJ6VTKukA1GRsvRw+12KyJndNjj0O4AgTxm2Pg=="
+      }
+    },
+    "npm:@fortawesome/fontawesome-svg-core": {
+      "type": "npm",
+      "name": "npm:@fortawesome/fontawesome-svg-core",
+      "data": {
+        "version": "6.5.1",
+        "packageName": "@fortawesome/fontawesome-svg-core",
+        "hash": "sha512-MfRCYlQPXoLlpem+egxjfkEuP9UQswTrlCOsknus/NcMoblTH2g0jPrapbcIb04KGA7E2GZxbAccGZfWoYgsrQ=="
+      }
+    },
+    "npm:@fortawesome/free-brands-svg-icons": {
+      "type": "npm",
+      "name": "npm:@fortawesome/free-brands-svg-icons",
+      "data": {
+        "version": "6.5.1",
+        "packageName": "@fortawesome/free-brands-svg-icons",
+        "hash": "sha512-093l7DAkx0aEtBq66Sf19MgoZewv1zeY9/4C7vSKPO4qMwEsW/2VYTUTpBtLwfb9T2R73tXaRDPmE4UqLCYHfg=="
+      }
+    },
+    "npm:@fortawesome/free-regular-svg-icons": {
+      "type": "npm",
+      "name": "npm:@fortawesome/free-regular-svg-icons",
+      "data": {
+        "version": "6.5.1",
+        "packageName": "@fortawesome/free-regular-svg-icons",
+        "hash": "sha512-m6ShXn+wvqEU69wSP84coxLbNl7sGVZb+Ca+XZq6k30SzuP3X4TfPqtycgUh9ASwlNh5OfQCd8pDIWxl+O+LlQ=="
+      }
+    },
+    "npm:@fortawesome/free-solid-svg-icons": {
+      "type": "npm",
+      "name": "npm:@fortawesome/free-solid-svg-icons",
+      "data": {
+        "version": "6.5.1",
+        "packageName": "@fortawesome/free-solid-svg-icons",
+        "hash": "sha512-S1PPfU3mIJa59biTtXJz1oI0+KAXW6bkAb31XKhxdxtuXDiUIFsih4JR1v5BbxY7hVHsD1RKq+jRkVRaf773NQ=="
       }
     },
     "npm:@humanwhocodes/config-array": {
@@ -2149,6 +2203,15 @@
         "version": "2.3.11",
         "packageName": "@ljharb/through",
         "hash": "sha512-ccfcIDlogiXNq5KcbAwbaO7lMh3Tm1i3khMPYpxlK8hH/W53zN81KM9coerRLOnTGu3nfXIniAmQbRI9OxbC0w=="
+      }
+    },
+    "npm:@ng-bootstrap/ng-bootstrap": {
+      "type": "npm",
+      "name": "npm:@ng-bootstrap/ng-bootstrap",
+      "data": {
+        "version": "16.0.0",
+        "packageName": "@ng-bootstrap/ng-bootstrap",
+        "hash": "sha512-+FJ3e6cX9DW2t7021Ji3oz433rk3+4jLfqzU+Jyx6/vJz1dIOaML3EAY6lYuW4TLiXgMPOMvs6KzPFALGh4Lag=="
       }
     },
     "npm:@ngtools/webpack": {
@@ -12144,6 +12207,41 @@
       "type": "static"
     },
     {
+      "source": "npm:@fortawesome/angular-fontawesome",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/angular-fontawesome",
+      "target": "npm:@fortawesome/fontawesome-svg-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/angular-fontawesome",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/fontawesome-svg-core",
+      "target": "npm:@fortawesome/fontawesome-common-types",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/free-brands-svg-icons",
+      "target": "npm:@fortawesome/fontawesome-common-types",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/free-regular-svg-icons",
+      "target": "npm:@fortawesome/fontawesome-common-types",
+      "type": "static"
+    },
+    {
+      "source": "npm:@fortawesome/free-solid-svg-icons",
+      "target": "npm:@fortawesome/fontawesome-common-types",
+      "type": "static"
+    },
+    {
       "source": "npm:@humanwhocodes/config-array",
       "target": "npm:@humanwhocodes/object-schema",
       "type": "static"
@@ -12276,6 +12374,41 @@
     {
       "source": "npm:@ljharb/through",
       "target": "npm:call-bind",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:@angular/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:@angular/forms",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:@angular/localize",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:@popperjs/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ng-bootstrap/ng-bootstrap",
+      "target": "npm:tslib",
       "type": "static"
     },
     {
