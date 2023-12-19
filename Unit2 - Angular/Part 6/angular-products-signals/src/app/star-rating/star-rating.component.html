@@ -1,0 +1,10 @@
+<span (mouseleave)="restoreRating()">
+  @for(star of [1,2,3,4,5]; track star) {
+    <fa-icon
+      [icon]="auxRating < star ? starEmpty : starFull"
+      (mouseenter)="auxRating = star"
+      (click)="changeRating(star)"
+      aria-hidden="true"
+    ></fa-icon>
+  }
+</span>
