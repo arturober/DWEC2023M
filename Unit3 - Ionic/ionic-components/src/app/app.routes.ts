@@ -98,4 +98,8 @@ export const routes: Routes = [
     path: 'skeleton',
     loadComponent: () => import('./skeleton/skeleton.page').then( m => m.SkeletonPage)
   },
+  {
+    path: 'modal',
+    loadComponent: () => import('./modal/modal.page').then( m => m.ModalPage)
+  },
 ];

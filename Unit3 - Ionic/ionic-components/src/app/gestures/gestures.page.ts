@@ -1,20 +1,54 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonContent,
+  IonItem,
+  IonLabel,
+  IonTitle
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-gestures',
   templateUrl: './gestures.page.html',
   styleUrls: ['./gestures.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [
+    JsonPipe,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+    IonContent,
+    IonItem,
+    IonLabel,
+    IonTitle
+  ],
 })
-export class GesturesPage implements OnInit {
+export class GesturesPage {
+  events = {
+    taps: 0,
+    press: 0,
+    swipeRight: 0,
+    swipeLeft: 0,
+  };
 
-  constructor() { }
-
-  ngOnInit() {
+  tap() {
+    this.events.taps++;
   }
 
+  press() {
+    this.events.press++;
+  }
+
+  swipeLeft() {
+    this.events.swipeLeft++;
+  }
+
+  swipeRight() {
+    this.events.swipeRight++;
+  }
 }

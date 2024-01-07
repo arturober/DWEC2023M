@@ -77,6 +77,9 @@ import {
   swapHorizontal,
   trash,
   infinite,
+  reorderThree,
+  bookmarks,
+  fingerPrint,
 } from 'ionicons/icons';
 
 @Component({
@@ -113,6 +116,7 @@ export class AppComponent {
     { title: 'Cards', url: '/cards', icon: 'albums' },
     { title: 'Fabs', url: '/fabs', icon: 'add-circle' },
     { title: 'Forms', url: '/forms', icon: 'checkbox' },
+    { title: 'Gestures', url: '/gestures', icon: 'finger-print' },
     { title: 'Grid', url: '/grid', icon: 'grid' },
     {
       title: 'Horizontal Scroll',
@@ -126,9 +130,13 @@ export class AppComponent {
     },
     { title: 'Lists', url: '/lists', icon: 'list' },
     { title: 'Loading', url: '/loading', icon: 'refresh' },
+    { title: 'Modal', url: '/modal', icon: 'albums' },
     { title: 'Popover', url: '/popover', icon: 'albums' },
     { title: 'Refresher', url: '/refresher', icon: 'refresh-circle' },
+    { title: 'Reorder', url: '/reorder', icon: 'reorder-three' },
     { title: 'Searchbar', url: '/searchbar', icon: 'search' },
+    { title: 'Segments', url: '/segment', icon: 'bookmarks' },
+    { title: 'Skeleton', url: '/skeleton', icon: 'list' },
     { title: 'Toolbars', url: '/toolbars', icon: 'browsers' },
     { title: 'Toast', url: '/toast', icon: 'alert' },
   ];
@@ -191,7 +199,10 @@ export class AppComponent {
       heart,
       close,
       refreshCircle,
-      infinite
+      infinite,
+      reorderThree,
+      bookmarks,
+      fingerPrint,
     });
   }
 }

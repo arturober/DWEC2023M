@@ -6426,6 +6426,15 @@
         "hash": "sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag=="
       }
     },
+    "npm:hammerjs": {
+      "type": "npm",
+      "name": "npm:hammerjs",
+      "data": {
+        "version": "2.0.8",
+        "packageName": "hammerjs",
+        "hash": "sha512-tSQXBXS/MWQOn/RKckawJ61vvsDpCom87JgxiYdGwHdOa0ht0vzUWDlfioofFCRU0L+6NGDt6XzbgoJvZkMeRQ=="
+      }
+    },
     "npm:handle-thing": {
       "type": "npm",
       "name": "npm:handle-thing",

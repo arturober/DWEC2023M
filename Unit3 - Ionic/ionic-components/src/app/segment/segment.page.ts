@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonSegment, IonSegmentButton, IonContent, IonList, IonItem } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-segment',
   templateUrl: './segment.page.html',
   styleUrls: ['./segment.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [FormsModule, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonSegment, IonSegmentButton, IonContent, IonList, IonItem]
 })
-export class SegmentPage implements OnInit {
+export class SegmentPage {
+  type = 'heroes';
+  heroes: string[] = ['Batman', 'Superman', 'Spiderman', 'Hulk', 'Mazinger Z'];
+  villains: string[] = ['Dr Eggman', 'The Joker', 'Darth Vader', 'Hannibal Lecter'];
+  weapons: string[] = ['Missile', 'Laser gun', 'Tank', 'X Rays'];
 
-  constructor() { }
-
-  ngOnInit() {
+  typeChanged() {
+    console.log(`New type selected: ${this.type}`);
   }
-
 }

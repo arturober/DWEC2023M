@@ -1,20 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonListHeader,
+  IonItem,
+  IonLabel,
+  IonAvatar,
+  IonSkeletonText,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-skeleton',
   templateUrl: './skeleton.page.html',
   styleUrls: ['./skeleton.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonListHeader,
+    IonItem,
+    IonLabel,
+    IonAvatar,
+    IonSkeletonText,
+  ],
 })
 export class SkeletonPage implements OnInit {
-
-  constructor() { }
+  data = false;
 
   ngOnInit() {
+    setTimeout(() => (this.data = true), 3000);
   }
-
 }
