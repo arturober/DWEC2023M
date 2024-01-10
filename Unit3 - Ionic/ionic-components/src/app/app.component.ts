@@ -80,6 +80,10 @@ import {
   reorderThree,
   bookmarks,
   fingerPrint,
+  home,
+  informationCircle,
+  people,
+  copy
 } from 'ionicons/icons';
 
 @Component({
@@ -137,6 +141,7 @@ export class AppComponent {
     { title: 'Searchbar', url: '/searchbar', icon: 'search' },
     { title: 'Segments', url: '/segment', icon: 'bookmarks' },
     { title: 'Skeleton', url: '/skeleton', icon: 'list' },
+    { title: 'Tabs', url: '/tabs', icon: 'copy' },
     { title: 'Toolbars', url: '/toolbars', icon: 'browsers' },
     { title: 'Toast', url: '/toast', icon: 'alert' },
   ];
@@ -203,6 +208,10 @@ export class AppComponent {
       reorderThree,
       bookmarks,
       fingerPrint,
+      home,
+      informationCircle,
+      people,
+      copy
     });
   }
 }

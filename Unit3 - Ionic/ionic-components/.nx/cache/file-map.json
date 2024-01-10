@@ -72,11 +72,47 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "8453012549218101381"
+        "hash": "7870441318416924600"
       },
       {
         "file": ".nx/cache/lockfile.hash",
         "hash": "13238795124718092498"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
+        "hash": "17036869540637447991"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/3rdpartylicenses.txt",
+        "hash": "5667550289807473445"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
+        "hash": "5018250891076049163"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/main.js",
+        "hash": "11366588937091843483"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/polyfills.js",
+        "hash": "2110773196768975388"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/runtime.js",
+        "hash": "9652903316845995179"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/styles.css",
+        "hash": "5562174198026097626"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/styles.js",
+        "hash": "13596360365094399219"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
@@ -164,11 +200,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "8601673187964723099"
+        "hash": "11747446879665577209"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "17070509042292212972"
+        "hash": "528053050911650628"
       },
       {
         "file": "src/app/badges/badges.page.html",
@@ -252,7 +288,7 @@
       },
       {
         "file": "src/app/gestures/gestures.page.html",
-        "hash": "16066753844150234521"
+        "hash": "2313908606680577666"
       },
       {
         "file": "src/app/gestures/gestures.page.scss",
@@ -264,7 +300,7 @@
       },
       {
         "file": "src/app/gestures/gestures.page.ts",
-        "hash": "13599967312436057138"
+        "hash": "18366837656297451247"
       },
       {
         "file": "src/app/grid/grid.page.html",
@@ -345,6 +381,38 @@
       {
         "file": "src/app/loading/loading.page.ts",
         "hash": "14759102369646992430"
+      },
+      {
+        "file": "src/app/modal/modal-content/modal-content.component.html",
+        "hash": "9673811251117005710"
+      },
+      {
+        "file": "src/app/modal/modal-content/modal-content.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modal/modal-content/modal-content.component.spec.ts",
+        "hash": "6439888392499141619"
+      },
+      {
+        "file": "src/app/modal/modal-content/modal-content.component.ts",
+        "hash": "9259971162006484728"
+      },
+      {
+        "file": "src/app/modal/modal.page.html",
+        "hash": "12652711747347708049"
+      },
+      {
+        "file": "src/app/modal/modal.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modal/modal.page.spec.ts",
+        "hash": "13147539567331321075"
+      },
+      {
+        "file": "src/app/modal/modal.page.ts",
+        "hash": "17085238502073654651"
       },
       {
         "file": "src/app/popover/popover-color/popover-color.component.html",
@@ -444,7 +512,7 @@
       },
       {
         "file": "src/app/skeleton/skeleton.page.html",
-        "hash": "495251678605545107"
+        "hash": "15160540946786447932"
       },
       {
         "file": "src/app/skeleton/skeleton.page.scss",
@@ -456,7 +524,7 @@
       },
       {
         "file": "src/app/skeleton/skeleton.page.ts",
-        "hash": "17396038578556356567"
+        "hash": "3736605842199688016"
       },
       {
         "file": "src/app/slides/slides.page.html",
@@ -473,6 +541,74 @@
       {
         "file": "src/app/slides/slides.page.ts",
         "hash": "4048445168604583190"
+      },
+      {
+        "file": "src/app/tabs/about/about.page.html",
+        "hash": "973750966517400550"
+      },
+      {
+        "file": "src/app/tabs/about/about.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/tabs/about/about.page.spec.ts",
+        "hash": "4341038331821120684"
+      },
+      {
+        "file": "src/app/tabs/about/about.page.ts",
+        "hash": "12719154682438804165"
+      },
+      {
+        "file": "src/app/tabs/contacts/contacts.page.html",
+        "hash": "1673701838194156438"
+      },
+      {
+        "file": "src/app/tabs/contacts/contacts.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/tabs/contacts/contacts.page.spec.ts",
+        "hash": "12288726286084632995"
+      },
+      {
+        "file": "src/app/tabs/contacts/contacts.page.ts",
+        "hash": "15428046650524291403"
+      },
+      {
+        "file": "src/app/tabs/home/home.page.html",
+        "hash": "14280561719630471460"
+      },
+      {
+        "file": "src/app/tabs/home/home.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/tabs/home/home.page.spec.ts",
+        "hash": "3212064809614742560"
+      },
+      {
+        "file": "src/app/tabs/home/home.page.ts",
+        "hash": "378695957407971578"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.html",
+        "hash": "135853579748334600"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.spec.ts",
+        "hash": "15985015991382862103"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.ts",
+        "hash": "6047136068723051486"
+      },
+      {
+        "file": "src/app/tabs/tabs.routes.ts",
+        "hash": "17656974393525545180"
       },
       {
         "file": "src/app/toast/toast.page.html",
@@ -560,11 +696,11 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "282009733975285211"
+        "hash": "3358440429102779996"
       },
       {
         "file": "src/polyfills.ts",
-        "hash": "11812151144158597559"
+        "hash": "4267540776845235341"
       },
       {
         "file": "src/test.ts",

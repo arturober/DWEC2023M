@@ -102,4 +102,10 @@ export const routes: Routes = [
     path: 'modal',
     loadComponent: () => import('./modal/modal.page').then( m => m.ModalPage)
   },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage),
+    // Child pages inside the tabs page
+    loadChildren: () => import('./tabs/tabs.routes').then(m => m.tabsRoutes)
+  },
 ];
