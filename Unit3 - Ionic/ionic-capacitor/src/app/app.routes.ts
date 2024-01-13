@@ -30,4 +30,44 @@ export const routes: Routes = [
     path: 'geolocation',
     loadComponent: () => import('./geolocation/geolocation.page').then( m => m.GeolocationPage)
   },
+  {
+    path: 'local-notifications',
+    loadComponent: () => import('./local-notifications/local-notifications.page').then( m => m.LocalNotificationsPage)
+  },
+  {
+    path: 'dialogs',
+    loadComponent: () => import('./dialogs/dialogs.page').then( m => m.DialogsPage)
+  },
+  {
+    path: 'action-sheet',
+    loadComponent: () => import('./action-sheet/action-sheet.page').then( m => m.ActionSheetPage)
+  },
+  {
+    path: 'toast',
+    loadComponent: () => import('./toast/toast.page').then( m => m.ToastPage)
+  },
+  {
+    path: 'motion',
+    loadComponent: () => import('./motion/motion.page').then( m => m.MotionPage)
+  },
+  {
+    path: 'network',
+    loadComponent: () => import('./network/network.page').then( m => m.NetworkPage)
+  },
+  {
+    path: 'share',
+    loadComponent: () => import('./share/share.page').then( m => m.SharePage)
+  },
+  {
+    path: 'preferences',
+    loadComponent: () => import('./preferences/preferences.page').then( m => m.PreferencesPage)
+  },
+  {
+    path: 'app',
+    loadComponent: () => import('./app/app.page').then( m => m.AppPage)
+  },
+  {
+    path: 'navigation',
+    loadComponent: () => import('./navigation/navigation.page').then( m => m.NavigationPage)
+  },
 ];

@@ -72,7 +72,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "7870441318416924600"
+        "hash": "13795411173255768783"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -525,22 +525,6 @@
       {
         "file": "src/app/skeleton/skeleton.page.ts",
         "hash": "3736605842199688016"
-      },
-      {
-        "file": "src/app/slides/slides.page.html",
-        "hash": "10012439378459516185"
-      },
-      {
-        "file": "src/app/slides/slides.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/slides/slides.page.spec.ts",
-        "hash": "16672539823575684245"
-      },
-      {
-        "file": "src/app/slides/slides.page.ts",
-        "hash": "4048445168604583190"
       },
       {
         "file": "src/app/tabs/about/about.page.html",

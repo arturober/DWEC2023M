@@ -1287,6 +1287,15 @@
         "hash": "sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg=="
       }
     },
+    "npm:@capacitor/action-sheet": {
+      "type": "npm",
+      "name": "npm:@capacitor/action-sheet",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/action-sheet",
+        "hash": "sha512-WeiHz5KYfqypphd4JwD8DSxhi9QIk9Wh4XZFMlBivZm6tXhlJLjAo0kHzZGNX3J7H+rpn0n0aFVcZylnP34erQ=="
+      }
+    },
     "npm:@capacitor/android": {
       "type": "npm",
       "name": "npm:@capacitor/android",
@@ -1503,6 +1512,15 @@
         "hash": "sha512-tmjK0H8IKbDLMcmzZzJPbV+9yLkKJ76QOdz4A7fZAOYx2GnFHsFngxldq/wKotGAJuDX/ih3ZzHNrzVguzlv2g=="
       }
     },
+    "npm:@capacitor/dialog": {
+      "type": "npm",
+      "name": "npm:@capacitor/dialog",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/dialog",
+        "hash": "sha512-/F9aSADswh+5pBE5810vD/N+Ox3KmahLXn1rMqisao8gNVI/Lk4YanWSPqDJCauHwOfZyeZscmDsETizAlSLFA=="
+      }
+    },
     "npm:@capacitor/filesystem": {
       "type": "npm",
       "name": "npm:@capacitor/filesystem",
@@ -1539,6 +1557,51 @@
         "hash": "sha512-+6lW8z2nXTM2NOG7D7pOasCfIGicz26+EeDRXIj5AtJibbjwtE1Q5GIY+qGHgzpmwOF0qmcrGJBz4zagDwUapg=="
       }
     },
+    "npm:@capacitor/local-notifications": {
+      "type": "npm",
+      "name": "npm:@capacitor/local-notifications",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/local-notifications",
+        "hash": "sha512-DB+ZBjv3Ri/0mtSzjMxLMHNGfg5m615ewDfQxp++mu7pYUM1RkxfSiigw73+PlZXDow1YNQJRlzTkwEKs6Pf+g=="
+      }
+    },
+    "npm:@capacitor/motion": {
+      "type": "npm",
+      "name": "npm:@capacitor/motion",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/motion",
+        "hash": "sha512-refNzgU58i+IRVRkf8yxDxdjA8XJ8BMGe50HcjAT4TYnYXXIN8z3Kc/NiEIraImWF7sCpV4g68U/B+74DfymRg=="
+      }
+    },
+    "npm:@capacitor/network": {
+      "type": "npm",
+      "name": "npm:@capacitor/network",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/network",
+        "hash": "sha512-E//cq9NEvFFiLyptK0ha4B8OytdWpSqvtUo5L2uiqcoADWUnl5d7aK45M09eyd347HchICeEdIkO31n6CNxyYA=="
+      }
+    },
+    "npm:@capacitor/preferences": {
+      "type": "npm",
+      "name": "npm:@capacitor/preferences",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/preferences",
+        "hash": "sha512-aDe4wGTVSAIue6XXdUFgyz7SGszxK/Ptt/iWTydMpzc1PlZXw1XTTnciM+S+SLLNZFzXlkpXT3wMnh9t0DojUA=="
+      }
+    },
+    "npm:@capacitor/share": {
+      "type": "npm",
+      "name": "npm:@capacitor/share",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/share",
+        "hash": "sha512-/dVOW7kcuuD7hWB9Z1drArIpEk+5JCoMnMrAs2c7CLp3q5PeaXNJjTkGr6RJ1OtMhsHyXc6DAFwQ4frFkmZsgw=="
+      }
+    },
     "npm:@capacitor/splash-screen": {
       "type": "npm",
       "name": "npm:@capacitor/splash-screen",
@@ -1555,6 +1618,15 @@
         "version": "5.0.6",
         "packageName": "@capacitor/status-bar",
         "hash": "sha512-7od8CxsBnot1XMK3IeOkproFL4hgoKoWAc3pwUvmDOkQsXoxwQm4SR9mLwQavv1XfxtHbFV9Ukd7FwMxOPSViw=="
+      }
+    },
+    "npm:@capacitor/toast": {
+      "type": "npm",
+      "name": "npm:@capacitor/toast",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/toast",
+        "hash": "sha512-djkRHVT8YtLJC1vvOnDU3EfAHfQYqAD7LYEXmSmhYuTnXRIggX93m/NkazwLnnpr95kDbs2VVPM/J6dqqYuJng=="
       }
     },
     "npm:@colors/colors": {
@@ -2995,6 +3067,15 @@
         "version": "0.11.0",
         "packageName": "@pkgjs/parseargs",
         "hash": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="
+      }
+    },
+    "npm:@proteansoftware/capacitor-start-navigation": {
+      "type": "npm",
+      "name": "npm:@proteansoftware/capacitor-start-navigation",
+      "data": {
+        "version": "5.0.0",
+        "packageName": "@proteansoftware/capacitor-start-navigation",
+        "hash": "sha512-4mxqGcupfPZlCx3RGRySpZzWzLgvNXNo9SQmDxUc5FO0RJ5afNDivBHQIsQ5vLsU8WvSOU1H6fndAxCQBr15/A=="
       }
     },
     "npm:@sigstore/bundle": {
@@ -13380,6 +13461,11 @@
       "type": "static"
     },
     {
+      "source": "npm:@capacitor/action-sheet",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
       "source": "npm:@capacitor/android",
       "target": "npm:@capacitor/core",
       "type": "static"
@@ -13525,6 +13611,11 @@
       "type": "static"
     },
     {
+      "source": "npm:@capacitor/dialog",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
       "source": "npm:@capacitor/filesystem",
       "target": "npm:@capacitor/core",
       "type": "static"
@@ -13545,12 +13636,42 @@
       "type": "static"
     },
     {
+      "source": "npm:@capacitor/local-notifications",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/motion",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/network",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/preferences",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/share",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
       "source": "npm:@capacitor/splash-screen",
       "target": "npm:@capacitor/core",
       "type": "static"
     },
     {
       "source": "npm:@capacitor/status-bar",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/toast",
       "target": "npm:@capacitor/core",
       "type": "static"
     },
@@ -14552,6 +14673,11 @@
     {
       "source": "npm:semver@7.5.3",
       "target": "npm:lru-cache@6.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@proteansoftware/capacitor-start-navigation",
+      "target": "npm:@capacitor/core",
       "type": "static"
     },
     {
