@@ -1288,6 +1288,15 @@
         "hash": "sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg=="
       }
     },
+    "npm:@capacitor-community/facebook-login": {
+      "type": "npm",
+      "name": "npm:@capacitor-community/facebook-login",
+      "data": {
+        "version": "5.0.3",
+        "packageName": "@capacitor-community/facebook-login",
+        "hash": "sha512-MdVBkPHbtAqiVgj5YJdIzO+2DG5kBakvjkTPpnxkxEwOVCPNmshyhR5YzPqkkbG00rpgU2SArM/Ml2riceSi/A=="
+      }
+    },
     "npm:@capacitor/action-sheet": {
       "type": "npm",
       "name": "npm:@capacitor/action-sheet",
@@ -13711,6 +13720,13 @@
       {
         "source": "npm:@babel/types",
         "target": "npm:to-fast-properties",
+        "type": "static"
+      }
+    ],
+    "npm:@capacitor-community/facebook-login": [
+      {
+        "source": "npm:@capacitor-community/facebook-login",
+        "target": "npm:@capacitor/core",
         "type": "static"
       }
     ],

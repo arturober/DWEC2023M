@@ -10,6 +10,7 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor-community/facebook-login": "^5.0.3",
     "@capacitor/action-sheet": "^5.0.6",
     "@capacitor/android": "^5.6.0",
     "@capacitor/app": "^5.0.6",
@@ -122,7 +123,7 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "6876815591263944027"
+        "hash": "10703662000287675416"
       },
       {
         "file": "android/app/src/main/java/es/fullstackpro/ionic/capacitor/MainActivity.java",
@@ -258,7 +259,7 @@
       },
       {
         "file": "android/app/src/main/res/values/strings.xml",
-        "hash": "12879754605304631216"
+        "hash": "4593979490748458307"
       },
       {
         "file": "android/app/src/main/res/values/styles.xml",
@@ -326,11 +327,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "13218776877228875939"
+        "hash": "16762480249965308749"
       },
       {
         "file": "package.json",
-        "hash": "9700608778645984213"
+        "hash": "16864891144126938949"
       },
       {
         "file": "src/app/action-sheet/action-sheet.page.html",
@@ -506,7 +507,7 @@
       },
       {
         "file": "src/app/facebook-login/facebook-login.page.html",
-        "hash": "11363593084413166943"
+        "hash": "16722576370889929283"
       },
       {
         "file": "src/app/facebook-login/facebook-login.page.scss",
