@@ -70,4 +70,24 @@ export const routes: Routes = [
     path: 'navigation',
     loadComponent: () => import('./navigation/navigation.page').then( m => m.NavigationPage)
   },
+  {
+    path: 'google-login',
+    loadComponent: () => import('./google-login/google-login.page').then( m => m.GoogleLoginPage)
+  },
+  {
+    path: 'facebook-login',
+    loadComponent: () => import('./facebook-login/facebook-login.page').then( m => m.FacebookLoginPage)
+  },
+  {
+    path: 'barcode-scanner',
+    loadComponent: () => import('./barcode-scanner/barcode-scanner.page').then( m => m.BarcodeScannerPage)
+  },
+  {
+    path: 'sqlite',
+    loadComponent: () => import('./sqlite/sqlite.page').then( m => m.SqlitePage)
+  },
+  {
+    path: 'flashlight',
+    loadComponent: () => import('./flashlight/flashlight.page').then( m => m.FlashlightPage)
+  },
 ];

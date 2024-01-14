@@ -30,6 +30,7 @@
     "@capacitor/splash-screen": "^5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@capacitor/toast": "^5.0.6",
+    "@codetrix-studio/capacitor-google-auth": "^3.3.6",
     "@ionic/angular": "^7.5.0",
     "@ionic/pwa-elements": "^3.2.2",
     "@proteansoftware/capacitor-start-navigation": "^5.0.0",
@@ -109,7 +110,7 @@
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "14623607245525450779"
+        "hash": "10949875080769424135"
       },
       {
         "file": "android/app/proguard-rules.pro",
@@ -277,7 +278,7 @@
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "12081519354977952326"
+        "hash": "15229801244631886344"
       },
       {
         "file": "android/gradle.properties",
@@ -313,7 +314,7 @@
       },
       {
         "file": "capacitor.config.ts",
-        "hash": "14141694188531120408"
+        "hash": "7511071673883895756"
       },
       {
         "file": "ionic.config.json",
@@ -325,11 +326,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "9306960687168296638"
+        "hash": "13218776877228875939"
       },
       {
         "file": "package.json",
-        "hash": "15639395187455588895"
+        "hash": "9700608778645984213"
       },
       {
         "file": "src/app/action-sheet/action-sheet.page.html",
@@ -361,11 +362,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "6484260857506362788"
+        "hash": "17186482483314855238"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "1537728420915321870"
+        "hash": "492472740464988667"
       },
       {
         "file": "src/app/app/app.page.html",
@@ -382,6 +383,22 @@
       {
         "file": "src/app/app/app.page.ts",
         "hash": "3413585061284001061"
+      },
+      {
+        "file": "src/app/barcode-scanner/barcode-scanner.page.html",
+        "hash": "16415756084909370958"
+      },
+      {
+        "file": "src/app/barcode-scanner/barcode-scanner.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/barcode-scanner/barcode-scanner.page.spec.ts",
+        "hash": "615894345557702360"
+      },
+      {
+        "file": "src/app/barcode-scanner/barcode-scanner.page.ts",
+        "hash": "7089208313438920176"
       },
       {
         "file": "src/app/bingmaps/bingmaps.config.ts",
@@ -488,6 +505,22 @@
         "hash": "17709220832322474001"
       },
       {
+        "file": "src/app/facebook-login/facebook-login.page.html",
+        "hash": "11363593084413166943"
+      },
+      {
+        "file": "src/app/facebook-login/facebook-login.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/facebook-login/facebook-login.page.spec.ts",
+        "hash": "16810321486617727915"
+      },
+      {
+        "file": "src/app/facebook-login/facebook-login.page.ts",
+        "hash": "10047498899954166362"
+      },
+      {
         "file": "src/app/filesystem/filesystem.page.html",
         "hash": "11447532990851913744"
       },
@@ -504,6 +537,22 @@
         "hash": "17489162535789521656"
       },
       {
+        "file": "src/app/flashlight/flashlight.page.html",
+        "hash": "9032288242810348457"
+      },
+      {
+        "file": "src/app/flashlight/flashlight.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/flashlight/flashlight.page.spec.ts",
+        "hash": "390332944236783746"
+      },
+      {
+        "file": "src/app/flashlight/flashlight.page.ts",
+        "hash": "13442891423306392664"
+      },
+      {
         "file": "src/app/geolocation/geolocation.page.html",
         "hash": "3879741755993676893"
       },
@@ -518,6 +567,22 @@
       {
         "file": "src/app/geolocation/geolocation.page.ts",
         "hash": "8192856063536252500"
+      },
+      {
+        "file": "src/app/google-login/google-login.page.html",
+        "hash": "12486145109743117012"
+      },
+      {
+        "file": "src/app/google-login/google-login.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/google-login/google-login.page.spec.ts",
+        "hash": "4337009719459534145"
+      },
+      {
+        "file": "src/app/google-login/google-login.page.ts",
+        "hash": "4179342768136287895"
       },
       {
         "file": "src/app/local-notifications/local-notifications.page.html",
@@ -614,6 +679,22 @@
       {
         "file": "src/app/share/share.page.ts",
         "hash": "10759312983194084395"
+      },
+      {
+        "file": "src/app/sqlite/sqlite.page.html",
+        "hash": "4351284393748751969"
+      },
+      {
+        "file": "src/app/sqlite/sqlite.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/sqlite/sqlite.page.spec.ts",
+        "hash": "8077691743999623629"
+      },
+      {
+        "file": "src/app/sqlite/sqlite.page.ts",
+        "hash": "7014841847362330920"
       },
       {
         "file": "src/app/toast/toast.page.html",

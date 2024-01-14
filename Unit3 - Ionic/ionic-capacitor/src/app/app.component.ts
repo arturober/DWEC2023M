@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 import {
   IonApp,
   IonSplitPane,
@@ -19,7 +20,7 @@ import {
   IonToolbar,
   IonTitle,
   Platform,
-  IonRouterLink
+  IonRouterLink,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
@@ -38,7 +39,11 @@ import {
   share,
   save,
   apps,
-  navigate
+  navigate,
+  logoFacebook,
+  logoGoogle,
+  flashlight,
+  grid
 } from 'ionicons/icons';
 
 @Component({
@@ -75,9 +80,11 @@ export class AppComponent {
     { title: 'Clipboard', url: '/clipboard', icon: 'clipboard' },
     { title: 'Device Info', url: '/device', icon: 'phone-portrait' },
     { title: 'Dialogs', url: '/dialogs', icon: 'alert' },
+    { title: 'Facebook Login', url: '/facebook-login', icon: 'logo-facebook' },
     { title: 'Filesystem', url: '/filesystem', icon: 'folder' },
+    { title: 'Flashlight', url: '/flashlight', icon: 'flashlight' },
     { title: 'Geolocation', url: '/geolocation', icon: 'pin' },
-
+    { title: 'Google Login', url: '/google-login', icon: 'logo-google' },
     {
       title: 'Local notifications',
       url: '/local-notifications',
@@ -88,6 +95,7 @@ export class AppComponent {
     { title: 'Motion', url: '/motion', icon: 'move' },
     { title: 'Preferences', url: '/preferences', icon: 'save' },
     { title: 'Social sharing', url: '/share', icon: 'share' },
+    { title: 'SQLite', url: '/sqlite', icon: 'grid' },
     { title: 'Toast', url: '/toast', icon: 'alarm' },
     { title: 'Vibration', url: '/vibration', icon: 'pulse' },
   ];
@@ -111,7 +119,11 @@ export class AppComponent {
       share,
       save,
       apps,
-      navigate
+      navigate,
+      logoFacebook,
+      logoGoogle,
+      flashlight,
+      grid
     });
 
     this.initializeApp();
@@ -123,7 +135,7 @@ export class AppComponent {
       SplashScreen.hide();
       StatusBar.setBackgroundColor({ color: '#3880ff' });
       StatusBar.setStyle({ style: Style.Dark });
-      // GoogleAuth.initialize();
+      GoogleAuth.initialize();
     }
   }
 }

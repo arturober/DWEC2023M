@@ -1630,6 +1630,15 @@
         "hash": "sha512-djkRHVT8YtLJC1vvOnDU3EfAHfQYqAD7LYEXmSmhYuTnXRIggX93m/NkazwLnnpr95kDbs2VVPM/J6dqqYuJng=="
       }
     },
+    "npm:@codetrix-studio/capacitor-google-auth": {
+      "type": "npm",
+      "name": "npm:@codetrix-studio/capacitor-google-auth",
+      "data": {
+        "version": "3.3.6",
+        "packageName": "@codetrix-studio/capacitor-google-auth",
+        "hash": "sha512-SiMjYq5O2rWzEdKrmu3VZQ2nmFdq6LUXPzsNbjs4Ri6WTJVCtzp1HI12t4Dcwi5YoSw8g94Iyi3Can8msj57QA=="
+      }
+    },
     "npm:@colors/colors": {
       "type": "npm",
       "name": "npm:@colors/colors",
@@ -13964,6 +13973,13 @@
     "npm:@capacitor/toast": [
       {
         "source": "npm:@capacitor/toast",
+        "target": "npm:@capacitor/core",
+        "type": "static"
+      }
+    ],
+    "npm:@codetrix-studio/capacitor-google-auth": [
+      {
+        "source": "npm:@codetrix-studio/capacitor-google-auth",
         "target": "npm:@capacitor/core",
         "type": "static"
       }
