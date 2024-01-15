@@ -5,6 +5,12 @@ project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/
 include ':capacitor-community-facebook-login'
 project(':capacitor-community-facebook-login').projectDir = new File('../node_modules/@capacitor-community/facebook-login/android')
 
+include ':capacitor-community-sqlite'
+project(':capacitor-community-sqlite').projectDir = new File('../node_modules/@capacitor-community/sqlite/android')
+
+include ':capacitor-mlkit-barcode-scanning'
+project(':capacitor-mlkit-barcode-scanning').projectDir = new File('../node_modules/@capacitor-mlkit/barcode-scanning/android')
+
 include ':capacitor-action-sheet'
 project(':capacitor-action-sheet').projectDir = new File('../node_modules/@capacitor/action-sheet/android')
 
@@ -55,6 +61,9 @@ project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacit
 
 include ':capacitor-toast'
 project(':capacitor-toast').projectDir = new File('../node_modules/@capacitor/toast/android')
+
+include ':capgo-capacitor-flash'
+project(':capgo-capacitor-flash').projectDir = new File('../node_modules/@capgo/capacitor-flash/android')
 
 include ':codetrix-studio-capacitor-google-auth'
 project(':codetrix-studio-capacitor-google-auth').projectDir = new File('../node_modules/@codetrix-studio/capacitor-google-auth/android')
