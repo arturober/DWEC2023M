@@ -49,8 +49,8 @@ export class BarcodeScannerPage implements OnInit {
     const resp = await BarcodeScanner.isGoogleBarcodeScannerModuleAvailable();
     if(!resp.available) {
       await BarcodeScanner.installGoogleBarcodeScannerModule();
-      this.installed = true;
     }
+    this.installed = true;
   }
 
   async scan() {

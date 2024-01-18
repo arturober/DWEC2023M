@@ -114,7 +114,7 @@
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "4027133231135155757"
+        "hash": "12378359440708807531"
       },
       {
         "file": "android/app/proguard-rules.pro",
@@ -126,7 +126,7 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "4935238079482628809"
+        "hash": "18352470373846297679"
       },
       {
         "file": "android/app/src/main/java/es/fullstackpro/ionic/capacitor/MainActivity.java",
@@ -282,7 +282,7 @@
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "14237284650560983508"
+        "hash": "5474524121246556255"
       },
       {
         "file": "android/gradle.properties",
@@ -402,7 +402,7 @@
       },
       {
         "file": "src/app/barcode-scanner/barcode-scanner.page.ts",
-        "hash": "2981710755033996076"
+        "hash": "8780877307907005117"
       },
       {
         "file": "src/app/bingmaps/bingmaps.config.ts",
@@ -542,7 +542,7 @@
       },
       {
         "file": "src/app/flashlight/flashlight.page.html",
-        "hash": "14079494748624723645"
+        "hash": "2029894655161886494"
       },
       {
         "file": "src/app/flashlight/flashlight.page.scss",
@@ -554,7 +554,7 @@
       },
       {
         "file": "src/app/flashlight/flashlight.page.ts",
-        "hash": "5498770501027593789"
+        "hash": "8926709493485592122"
       },
       {
         "file": "src/app/geolocation/geolocation.page.html",

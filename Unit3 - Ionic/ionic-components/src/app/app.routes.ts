@@ -83,10 +83,6 @@ export const routes: Routes = [
     loadComponent: () => import('./segment/segment.page').then( m => m.SegmentPage)
   },
   {
-    path: 'slides',
-    loadComponent: () => import('./slides/slides.page').then( m => m.SlidesPage)
-  },
-  {
     path: 'virtual-scroll',
     loadComponent: () => import('./virtual-scroll/virtual-scroll.page').then( m => m.VirtualScrollPage)
   },
