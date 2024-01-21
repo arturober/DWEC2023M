@@ -1,4 +1,4 @@
-import { Component, EnvironmentInjector, Input, OnInit, inject, signal } from '@angular/core';
+import { Component, EnvironmentInjector, Input, inject, signal } from '@angular/core';
 import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
 import { Product } from '../interfaces/product';
 import { ProductsService } from '../services/products.service';
@@ -10,7 +10,7 @@ import { ProductsService } from '../services/products.service';
   standalone: true,
   imports: [IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel]
 })
-export class ProductDetailPage implements OnInit {
+export class ProductDetailPage  {
   @Input() id!: number;
   product = signal<Product|null>(null);
 
@@ -19,7 +19,7 @@ export class ProductDetailPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ionViewWillEnter() {
     this.#productsService.getProduct(this.id).subscribe(
       p => this.product.set(p)
     )

@@ -1,11 +1,14 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic-products',
+  appId: 'es.fullstackpro.ionic.products',
+  appName: 'Ionic Products',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'https',
+  },
+  android: {
+    allowMixedContent: true
   }
 };
 
