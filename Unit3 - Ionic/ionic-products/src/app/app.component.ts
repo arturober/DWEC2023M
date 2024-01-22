@@ -125,6 +125,11 @@ export class AppComponent {
       StatusBar.setBackgroundColor({ color: '#3880ff' });
       StatusBar.setStyle({ style: Style.Dark });
 
+      const res = await PushNotifications.checkPermissions();
+      if(res.receive !== 'granted') {
+        await PushNotifications.requestPermissions();
+      }
+
       // Show us the notification payload if the app is open on our device
       PushNotifications.addListener(
         'pushNotificationReceived',
