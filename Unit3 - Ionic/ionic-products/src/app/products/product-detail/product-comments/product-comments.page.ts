@@ -25,7 +25,7 @@ export class ProductCommentsPage {
     this.loadComments();
     // If the app comes back from being paused, reload comments
     this.resumeSub = this.#platform.resume.subscribe(
-      () => this.#ngZone.run(() => this.loadComments()) // Needs NgZone because Angular doesn't detect this event
+      () => this.loadComments() // Needs NgZone because Angular doesn't detect this event
     );
   }
 
@@ -35,7 +35,7 @@ export class ProductCommentsPage {
 
   loadComments(refresher?: IonRefresher) {
     this.#productsService.getComments(this.id).subscribe((comments) => {
-      this.comments = comments;
+      this.#ngZone.run(() => this.comments = comments);
       refresher?.complete();
     });
   }
@@ -68,8 +68,7 @@ export class ProductCommentsPage {
     if (result.role === 'ok') {
       this.#productsService
         .addComment(this.id, result.data.values.comment)
-        .subscribe((comment) => this.comments.push(comment));
+        .subscribe((comment) => this.#ngZone.run(() => this.comments.push(comment)));
     }
   }
-
 }
