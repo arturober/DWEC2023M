@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package es.fullstackpro.ionic.products;
 
 import com.getcapacitor.BridgeActivity;
 
