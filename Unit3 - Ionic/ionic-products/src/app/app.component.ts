@@ -150,7 +150,6 @@ export class AppComponent {
           if (notification.notification.data.prodId) {
             this.#nav.navigateRoot([
               '/products',
-              'details',
               notification.notification.data.prodId,
               'comments',
             ]);
