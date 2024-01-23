@@ -93,11 +93,11 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "4462205925370081679"
+        "hash": "10876559339592831634"
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "14422129861136235964"
+        "hash": "14186192684919099377"
       },
       {
         "file": "android/app/google-services.json",
@@ -113,11 +113,11 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "4606030136099750488"
+        "hash": "6474874722796626110"
       },
       {
-        "file": "android/app/src/main/java/io/ionic/starter/MainActivity.java",
-        "hash": "18189106575645248423"
+        "file": "android/app/src/main/java/es/fullstackpro/ionic/products/MainActivity.java",
+        "hash": "1847671762189167442"
       },
       {
         "file": "android/app/src/main/res/drawable-land-hdpi/splash.png",
@@ -273,7 +273,7 @@
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "3914935979017180125"
+        "hash": "15545256500049218977"
       },
       {
         "file": "android/gradle.properties",
@@ -341,7 +341,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "3798615606041047739"
+        "hash": "7744261246397742909"
       },
       {
         "file": "src/app/app.routes.ts",
@@ -369,7 +369,7 @@
       },
       {
         "file": "src/app/auth/login/login.page.ts",
-        "hash": "6294545859422088880"
+        "hash": "7897800977966769508"
       },
       {
         "file": "src/app/auth/register/register.page.html",

@@ -27,9 +27,9 @@
           label="Email"
           labelPlacement="floating"
           required
+          email
           [(ngModel)]="user.email"
           #emailModel="ngModel"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         ></ion-input>
         @if (emailModel.dirty && emailModel.valid) {
         <ion-icon name="checkmark-circle" slot="end" color="success"></ion-icon>
