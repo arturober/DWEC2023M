@@ -3,7 +3,7 @@ import { isDevMode } from '@angular/core';
 
 export const baseUrlInterceptor: HttpInterceptorFn = (req, next) => {
   const serverUrl = isDevMode()
-    ? 'https://api.fullstackpro.es/products-example'
+    ? 'http://localhost:8080'
     : 'https://api.fullstackpro.es/products-example';
 
   const clonedReq = req.clone({
