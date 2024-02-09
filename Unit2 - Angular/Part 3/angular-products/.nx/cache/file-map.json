@@ -55,7 +55,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "4350156437140851707"
+        "hash": "7304952086867314492"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "7078043802963845976"
+        "hash": "13402155435032211793"
       },
       {
         "file": ".vscode/extensions.json",
@@ -127,7 +127,7 @@
       },
       {
         "file": "src/app/interceptors/base-url.interceptor.ts",
-        "hash": "2881820552039423156"
+        "hash": "6094648935187955600"
       },
       {
         "file": "src/app/interfaces/can-deactivate-component.ts",
@@ -167,7 +167,7 @@
       },
       {
         "file": "src/app/products/product-form/product-form.component.ts",
-        "hash": "11421066294660256052"
+        "hash": "11126379418579996085"
       },
       {
         "file": "src/app/products/product-item/product-item.component.css",

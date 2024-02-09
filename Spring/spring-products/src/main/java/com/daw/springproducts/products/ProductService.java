@@ -29,4 +29,16 @@ public class ProductService {
         p.setImageUrl(imgPath);
         return productRepository.save(p);
     }
+
+    public void delete(int id) {
+        productRepository.deleteById(id);
+    }
+
+    public int updateRating(int id, int rating) {
+        // Lanza NoSuchElementException si no lo encuentra al llamar a get()
+        Product p = productRepository.findById(id).get();
+        p.setRating(rating);
+        productRepository.save(p);
+        return p.getRating();
+    }
 }

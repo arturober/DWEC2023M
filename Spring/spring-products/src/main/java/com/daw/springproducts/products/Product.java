@@ -1,5 +1,6 @@
 package com.daw.springproducts.products;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -27,5 +28,5 @@ public class Product {
     private String imageUrl;
     @Column(insertable = false, updatable = false)
     @CreationTimestamp
-    private LocalDateTime available;
+    private LocalDate available;
 }
