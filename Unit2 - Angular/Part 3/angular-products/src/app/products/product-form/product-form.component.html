@@ -1,7 +1,7 @@
 <div class="card mb-4">
   <div class="card-header bg-success text-white">Add product</div>
   <div class="card-body">
-    <form (ngSubmit)="addProduct()">
+    <form (ngSubmit)="addProduct()" #addForm="ngForm">
       <div class="mb-3 row">
         <label for="description" class="col-sm-2 col-form-label text-sm-end"
           >Description</label

@@ -55,19 +55,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "1931390203621191628"
+        "hash": "1691094696934568727"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "14038154978841212913"
+        "hash": "6018116336344326459"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "8045308689188882423"
+        "hash": "5364620567468947982"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "10801918286033863319"
+        "hash": "1688865718893858210"
       },
       {
         "file": ".vscode/extensions.json",
@@ -87,15 +87,15 @@
       },
       {
         "file": "angular.json",
-        "hash": "7661816816460153110"
+        "hash": "5157507062991381539"
       },
       {
         "file": "package-lock.json",
-        "hash": "12803777206185279646"
+        "hash": "10535552362149320794"
       },
       {
         "file": "package.json",
-        "hash": "12084032018226143763"
+        "hash": "11469201075033015046"
       },
       {
         "file": "src/app/app.component.css",
@@ -126,16 +126,28 @@
         "hash": "1605261047765669910"
       },
       {
+        "file": "src/app/product-form/product-form.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/product-form/product-form.component.html",
+        "hash": "3594825532249556837"
+      },
+      {
+        "file": "src/app/product-form/product-form.component.ts",
+        "hash": "16657535912712854097"
+      },
+      {
         "file": "src/app/product-item/product-item.component.css",
         "hash": "14104552179926854336"
       },
       {
         "file": "src/app/product-item/product-item.component.html",
-        "hash": "215479426926009835"
+        "hash": "14919998430557322197"
       },
       {
         "file": "src/app/product-item/product-item.component.ts",
-        "hash": "1304504100011902635"
+        "hash": "15561995115222149157"
       },
       {
         "file": "src/app/products-page/products-page.component.css",
@@ -143,11 +155,23 @@
       },
       {
         "file": "src/app/products-page/products-page.component.html",
-        "hash": "15282751932141308343"
+        "hash": "7242506895999779403"
       },
       {
         "file": "src/app/products-page/products-page.component.ts",
-        "hash": "310594832977767376"
+        "hash": "10113376295176940402"
+      },
+      {
+        "file": "src/app/star-rating/star-rating.component.css",
+        "hash": "15023590486734932180"
+      },
+      {
+        "file": "src/app/star-rating/star-rating.component.html",
+        "hash": "4350791743061299762"
+      },
+      {
+        "file": "src/app/star-rating/star-rating.component.ts",
+        "hash": "11927279305979143457"
       },
       {
         "file": "src/assets/.gitkeep",

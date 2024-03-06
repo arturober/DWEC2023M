@@ -11,7 +11,7 @@ import { Product } from '../interfaces/product';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './product-form.component.html',
-  styleUrl: './product-form.component.css'
+  styleUrl: './product-form.component.css',
 })
 export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
