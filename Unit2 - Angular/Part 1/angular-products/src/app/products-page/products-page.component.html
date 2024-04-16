@@ -26,11 +26,13 @@
           <input  type="file" class="form-control" id="image"  accept="image/*"  (change)="changeImage($event)" name="fileName" [(ngModel)]="fileName" />
         </div>
       </div>
+      @if(newProduct.imageUrl) {
       <div class="row">
         <div class="col-sm-10 offset-sm-2">
           <img class="product-img" alt="" [src]="newProduct.imageUrl" />
         </div>
       </div>
+      }
 
       <div class="mb-3 row">
         <div class="offset-sm-2 col-sm-10">
@@ -69,8 +71,8 @@
           </tr>
         </thead>
         <tbody>
-          @for (product of products; track product.id; let even = $even) {
-          <tr [ngClass]="{ even: even }">
+          @for (product of products; track product.id) {
+          <tr [ngClass]="{ 'even': $even }">
             <td>
               @if (showImage) {
                 <img [src]="product.imageUrl" alt="" />

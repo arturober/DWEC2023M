@@ -55,7 +55,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "11942340031312993641"
+        "hash": "6268110365491288581"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "1576905471507953137"
+        "hash": "8168940074109919037"
       },
       {
         "file": ".vscode/extensions.json",
@@ -127,7 +127,7 @@
       },
       {
         "file": "src/app/interceptors/base-url.interceptor.ts",
-        "hash": "2881820552039423156"
+        "hash": "6094648935187955600"
       },
       {
         "file": "src/app/interfaces/can-deactivate-component.ts",
@@ -163,11 +163,11 @@
       },
       {
         "file": "src/app/products/product-form/product-form.component.html",
-        "hash": "7010580849685050039"
+        "hash": "11919315125752162638"
       },
       {
         "file": "src/app/products/product-form/product-form.component.ts",
-        "hash": "12725758234347429449"
+        "hash": "11126379418579996085"
       },
       {
         "file": "src/app/products/product-item/product-item.component.css",
@@ -216,10 +216,6 @@
       {
         "file": "src/app/star-rating/star-rating.component.ts",
         "hash": "12022692859107299538"
-      },
-      {
-        "file": "src/app/validators/min-date.directive.ts",
-        "hash": "2568364021662390640"
       },
       {
         "file": "src/app/welcome/welcome.component.css",

@@ -5,15 +5,13 @@ import { Router } from '@angular/router';
 import { CanDeactivateComponent } from '../../interfaces/can-deactivate-component';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../interfaces/product';
-import { MinDateDirective } from '../../validators/min-date.directive';
-import { OneCheckedDirective } from '../../validators/one-checked.directive';
 
 @Component({
   selector: 'product-form',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './product-form.component.html',
-  styleUrl: './product-form.component.css'
+  styleUrl: './product-form.component.css',
 })
 export class ProductFormComponent implements CanDeactivateComponent {
   newProduct!: Product;
